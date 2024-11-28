@@ -1,0 +1,391 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "heading_size": "h1",
+        "show_description": false,
+        "show_image": true,
+        "apply_overlay": false,
+        "image_position": "center center",
+        "image_ratio": "adapt",
+        "text_alignment": "left",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "adapt",
+        "show_text_below": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_pp9mwn": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Kavala Radio</title>\n<style>\n  .spotify-embed {\n    position: relative;\n    z-index: 20;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-top: 8px;\n  }\n  .spotify-embed__toggle {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 8px;\n    padding: 10px 30px; /* Made button 10px wider */\n    border-radius: 9999px;\n    background-color: #ffffff;\n    color: #000000;\n    cursor: pointer;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n  .spotify-embed__toggle svg {\n    fill: black;\n  }\n  .spotify-frame {\n    opacity: 0;\n    pointer-events: none;\n    max-height: 0;\n    transition: all 0.3s ease-in-out;\n    overflow: hidden;\n    width: 100%;\n    margin-top: 10px; /* Added gap of 10px */\n  }\n  .spotify-frame.open {\n    opacity: 1;\n    pointer-events: auto;\n    max-height: 200px; /* Adjust based on iframe height */\n  }\n</style>\n</head>\n<body>\n\n<div class=\"spotify-embed\">\n  <div class=\"spotify-embed__toggle\" onclick=\"toggleSpotify()\">\n    <div>Kavala Radio</div>\n    <svg width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"10.5\" cy=\"10.5\" r=\"10\" fill=\"#E7E7E7\" stroke=\"#E7E7E7\"></circle>\n      <path d=\"M13.7742 10.3871L8.69355 13.3204L8.69355 7.45378L13.7742 10.3871Z\" fill=\"black\"></path>\n    </svg>\n  </div>\n  <div id=\"spotify-frame\" class=\"spotify-frame\">\n   <iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/playlist/37i9dQZF1E8McTcQ7p9uzv?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>\n  </div>\n</div>\n\n<script>\n  function toggleSpotify() {\n    const spotifyFrame = document.getElementById('spotify-frame');\n    spotifyFrame.classList.toggle('open');\n  }\n</script>\n\n</body>\n</html>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_rndTiR": {
+      "type": "rich-text",
+      "blocks": {
+        "text_7jYTxN": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_phrases": "",
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "text_7jYTxN"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ss_circle_menu_j83ABe": {
+      "type": "ss-circle-menu",
+      "blocks": {
+        "image_zRkBxG": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/GardeniaParosOnesie8.png",
+            "bubble_text": "New Arrivals",
+            "bubble_link": "shopify://collections/new-arrivals"
+          }
+        },
+        "image_yCM3yf": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/Flower_Power_Vintage_Samet_Bottom_3.png",
+            "bubble_text": "Best-Sellers",
+            "bubble_link": "shopify://collections/best-sellers"
+          }
+        },
+        "image_qNtCrD": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/3.RhapsodyVanuatop.png",
+            "bubble_text": "Shop All",
+            "bubble_link": "shopify://collections/kavala"
+          }
+        },
+        "image_7Hnp9a": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/BloomParosOnesie3.png",
+            "bubble_text": "Onesies",
+            "bubble_link": "shopify://collections/onesies"
+          }
+        },
+        "image_rtFG3b": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/Cream_Boho_Sulawesi_Surf_Suit_1_1.jpg",
+            "bubble_text": "Surf Suits",
+            "bubble_link": "shopify://collections/surf-suits"
+          }
+        },
+        "image_axaVeP": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/BloomLaieBottom4.png",
+            "bubble_text": "Swimwear",
+            "bubble_link": "shopify://collections/all-swim"
+          }
+        },
+        "image_Y4rULY": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/Tuscany_Rhodes_Biker_Short_2.png",
+            "bubble_text": "Activewear",
+            "bubble_link": "shopify://collections/all-activewear"
+          }
+        }
+      },
+      "block_order": [
+        "image_zRkBxG",
+        "image_yCM3yf",
+        "image_qNtCrD",
+        "image_7Hnp9a",
+        "image_rtFG3b",
+        "image_axaVeP",
+        "image_Y4rULY"
+      ],
+      "settings": {
+        "slider_width": 100,
+        "slider_gap": 16,
+        "slider_gap_mobile": 16,
+        "icon_size": 104,
+        "icon_size_mobile": 74,
+        "icon_space": 6,
+        "icon_space_mobile": 2,
+        "icon_border_thickness": 2,
+        "icon_square": false,
+        "is_sticky": true,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 10,
+        "text_height": 130,
+        "text_mt": 8,
+        "icon_border_color": "#000000",
+        "icon_border_gradient": "linear-gradient(133deg, rgba(239, 174, 178, 1) 9%, rgba(239, 174, 178, 1) 49%)",
+        "text_color": "#444444",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "border_gradient": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 32,
+        "padding_bottom": 12,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1,
+        "full_width": true,
+        "content_width": 150,
+        "border_thickness": 0,
+        "lazy": true,
+        "hide_mobile": false,
+        "hide_desktop": false
+      }
+    },
+    "empty_space_i8q8hP": {
+      "type": "empty-space",
+      "settings": {
+        "desktop_height": 24,
+        "mobile_height": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "image_fQ7d4X": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "{{ collection.metafields.custom.promotion_image_1.value }}",
+            "image_width": 300,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_fQ7d4X"
+      ],
+      "settings": {
+        "products_per_row": 3,
+        "rows_per_page": 6,
+        "columns_mobile": "2",
+        "pagination": "paginated",
+        "enable_sticky_facet": true,
+        "enable_sorting": true,
+        "enable_viewing": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_filtering_color_swatches": true,
+        "filtering_color_swatches_add_label": true,
+        "filtering_max_items": 20,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "guarantees_GywgHX": {
+      "type": "guarantees",
+      "blocks": {
+        "guarantee_dWLdge": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "none",
+            "icon_size": "large",
+            "image": "shopify://shop_images/2_19e2cb39-c9ef-4700-be82-f78688e0c21f.png",
+            "custom_icon": "",
+            "title": "Designed in Byron Bay",
+            "title_size": "h4",
+            "text": "<p>We have employees all over the world working remotely and living their dream lives!</p>"
+          }
+        },
+        "guarantee_EhyanT": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "none",
+            "icon_size": "large",
+            "image": "shopify://shop_images/3_e59bbc4c-b75e-4b77-b121-7dd726c98574.png",
+            "custom_icon": "",
+            "title": "Woman Owned & Run",
+            "title_size": "h4",
+            "text": "<p>We have employees all over the world working remotely and living their dream lives!</p>"
+          }
+        },
+        "guarantee_A8mtL3": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "none",
+            "icon_size": "large",
+            "image": "shopify://shop_images/1_0cd51102-c2e8-4505-a856-0a3eed5ec942.png",
+            "custom_icon": "",
+            "title": "Donate 1% of Sales",
+            "title_size": "h4",
+            "text": "<p>We have employees all over the world working remotely and living their dream lives!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "guarantee_dWLdge",
+        "guarantee_EhyanT",
+        "guarantee_A8mtL3"
+      ],
+      "settings": {
+        "layout": "default",
+        "column_alignment": "center",
+        "horizontal_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "columns_desktop": 3,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "use_custom_colors": false,
+        "colors_icon": "#ffffff",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "show_divider": false,
+        "heading": "Items You've Been Eyeing",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_kmQWDC": {
+      "type": "rich-text",
+      "blocks": {
+        "text_YGnRXp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kavala Collective, your ultimate destination for activewear, surfwear, and swimwear. Inspired by the dynamic blend of yoga, surf, and wanderlust lifestyles, our brand is designed for all your adventures. From yoga classes to beachside days and surf sessions, Kavala empowers you to live your best life.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "highlight_phrases": "",
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "text_YGnRXp"
+      ],
+      "custom_css": [
+        "p {font-size: 14px;}"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#e8d5d0",
+        "gradient_background": "",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "subs": {
+      "type": "main-collection-subs",
+      "disabled": true,
+      "settings": {
+        "menu": "",
+        "per_row": 5,
+        "columns_mobile": "1",
+        "horizontal_on_mobile": true,
+        "grid_image": "product",
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "apply_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "custom_liquid_pp9mwn",
+    "rich_text_rndTiR",
+    "ss_circle_menu_j83ABe",
+    "empty_space_i8q8hP",
+    "product-grid",
+    "guarantees_GywgHX",
+    "recently-viewed",
+    "rich_text_kmQWDC",
+    "subs"
+  ]
+}

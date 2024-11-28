@@ -1,0 +1,263 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.overlay-group.name",
+  "type": "custom.overlay",
+  "sections": {
+    "popup": {
+      "type": "popup",
+      "blocks": {
+        "heading_JTWm4f": {
+          "type": "heading",
+          "settings": {
+            "heading": "$15 OFF*",
+            "heading_size": "h1",
+            "heading_tag": "h1"
+          }
+        },
+        "popup-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>YOUR FIRST ORDER</h2>",
+            "text_size": "typeset3",
+            "secondary_color": false
+          }
+        },
+        "text_CyL6qr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stay up to date with new arrivals, exclusive sales & all Kavala Collective adventures!</p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "popup-2": {
+          "type": "newsletter",
+          "settings": {
+            "text": "",
+            "button_style_secondary": false,
+            "button_full_width": true
+          }
+        },
+        "popup-3": {
+          "type": "social_media",
+          "settings": {
+            "mobile_disabled": false
+          }
+        },
+        "popup-4": {
+          "type": "floating",
+          "settings": {
+            "subheading": "GET $15 OFF!",
+            "show_social_media": "all",
+            "text_box_position": "left",
+            "colors_text": "#1a1b18",
+            "mobile_disabled": true,
+            "mobile_hide_social_media": false,
+            "mobile_social_heading": "Follow Us"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JTWm4f",
+        "popup-1",
+        "text_CyL6qr",
+        "popup-2",
+        "popup-3",
+        "popup-4"
+      ],
+      "custom_css": [
+        "h1 {font-size: 55px; padding-bottom: 0px;}"
+      ],
+      "settings": {
+        "mode": "enabled",
+        "only_homepage": false,
+        "only_visitor": true,
+        "return_url": "",
+        "delay": 5,
+        "expiry": 30,
+        "width": 750,
+        "padding": 40,
+        "text_alignment": "center",
+        "text_box_position": "center",
+        "image": "shopify://shop_images/FPVParosOnesie4.png",
+        "image_position": "left",
+        "colors_button_label": "#212326",
+        "colors_button_background": "#faeaa1",
+        "colors_text": "#1a1b18",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_shadow": "#a8e8e2"
+      }
+    },
+    "cookie-banner": {
+      "type": "cookie-banner",
+      "blocks": {
+        "cookie-banner-0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We use cookies and similar technologies to provide the best experience on our website. <a href=\"/policies/privacy-policy\">Privacy Policy</a></p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "cookie-banner-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Accept",
+            "button_label_2": "No"
+          }
+        }
+      },
+      "block_order": [
+        "cookie-banner-0",
+        "cookie-banner-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "mode": "enabled",
+        "delay": 5,
+        "text_alignment": "left",
+        "text_box_position": "bottom",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#1a1b18",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_shadow": "#a8e8e2"
+      }
+    },
+    "age-verifier": {
+      "type": "age-verifier",
+      "blocks": {
+        "age-verifier-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Confirm your age",
+            "heading_size": "h2",
+            "heading_tag": "p"
+          }
+        },
+        "age-verifier-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you 18 years old or older?</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "age-verifier-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Yes I am",
+            "button_label_2": "No I'm not",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "age-verifier-0",
+        "age-verifier-1",
+        "age-verifier-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "mode": "enabled",
+        "expiry": 30,
+        "width": 480,
+        "padding": 40,
+        "text_alignment": "center",
+        "image_position": "right",
+        "colors_button_label": "#212326",
+        "colors_button_background": "#faeaa1",
+        "colors_text": "#1a1b18",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_shadow": "#a8e8e2",
+        "colors_overlay": "#212326",
+        "colors_overlay_opacity": 80,
+        "blur_image": true
+      }
+    },
+    "mobile-dock": {
+      "type": "mobile-dock",
+      "blocks": {
+        "mobile-dock-0": {
+          "type": "home",
+          "settings": {
+            "custom_icon": "",
+            "title": "Home"
+          }
+        },
+        "mobile-dock-1": {
+          "type": "menu",
+          "settings": {
+            "custom_icon": "",
+            "title": "Menu"
+          }
+        },
+        "mobile-dock-2": {
+          "type": "search",
+          "settings": {
+            "custom_icon": "",
+            "title": "Search"
+          }
+        },
+        "mobile-dock-3": {
+          "type": "link",
+          "settings": {
+            "custom_icon": "",
+            "title": "Shop",
+            "link": "shopify://collections/all"
+          }
+        },
+        "mobile-dock-4": {
+          "type": "cart",
+          "settings": {
+            "custom_icon": "",
+            "title": "Cart"
+          }
+        },
+        "mobile-dock-5": {
+          "type": "account",
+          "settings": {
+            "custom_icon": "",
+            "title": "Account"
+          }
+        }
+      },
+      "block_order": [
+        "mobile-dock-0",
+        "mobile-dock-1",
+        "mobile-dock-2",
+        "mobile-dock-3",
+        "mobile-dock-4",
+        "mobile-dock-5"
+      ],
+      "settings": {
+        "use_custom_colors": false,
+        "colors_text": "#444444",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "popup",
+    "cookie-banner",
+    "age-verifier",
+    "mobile-dock"
+  ]
+}

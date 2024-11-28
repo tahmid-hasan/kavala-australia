@@ -1,0 +1,153 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product-modal",
+      "blocks": {
+        "spacing_jMntYd": {
+          "type": "spacing",
+          "settings": {
+            "desktop_height": 36,
+            "mobile_height": 36
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": true,
+            "price_size": "small"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "text_RKjfGr": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "✓ Buttery-Soft ✓ One-of-a-Kind Prints",
+            "text_style": "body"
+          }
+        },
+        "text_R6Qh8L": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "✓ Flattering Fits ✓ From Sea to Studio",
+            "text_style": "body"
+          }
+        },
+        "countdown": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "heading": "Hurry up ! Sale end in:",
+            "number_size": "compact",
+            "colors_heading": "#da3f3f",
+            "colors_text": "#da3f3f",
+            "colors_background": "#ffeeee"
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "price_size": "medium",
+            "show_badges": true,
+            "sale_badge_basis": "auto"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "swatches_source": "file",
+            "swatch_type": "round",
+            "enable_swatch_cross": true,
+            "enable_swatch_unavailable_click": false,
+            "size_chart": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 20,
+            "show_inventory_transfer": true,
+            "color_scheme": "accent-1"
+          }
+        },
+        "collapsible_tab-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Size & Fit",
+            "content": "<p>Fit: Slim — Streamlined to fit close to the body<br/>Length: Waist — Intended to hit between the waist and high hip<br/>Model is 5'9\"/175cm wearing a size S</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "read_more": {
+          "type": "read_more",
+          "settings": {
+            "show_icon": false
+          }
+        }
+      },
+      "block_order": [
+        "spacing_jMntYd",
+        "vendor",
+        "title",
+        "rating",
+        "text_RKjfGr",
+        "text_R6Qh8L",
+        "countdown",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "inventory_status",
+        "collapsible_tab-0",
+        "read_more"
+      ],
+      "settings": {
+        "show_featured_media": false,
+        "hide_variants": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": false,
+        "enable_image_fill": true,
+        "mobile_image_ratio": "adapt_first"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,30 @@
+<cart-quick-add>
+  <div class="QuickCart__wrapper">
+    <div class="add-to-cart-wrapper">
+      <button type="button" class="button" data-add-to-cart>Add to cart</button>
+    </div>
+    <div class="ProductCard__quick__init">
+      <div class="ProductCard__quick__init__container">
+        <div class="ProductCard__quick__add--desktop hide--mobile">
+          <div class="ProductCard__variants specific-details ProductCard__specific-details-split" style="">
+            {% for variant in product.variants %}
+              {% assign size_option = product.options_with_values | where: "name", "Size" %}
+              {% assign option_position = size_option.first.position | minus: 1 %}
+              {% if size_option.first %}
+                <div class="ProductCard__variant {% if variant.available %}ProductCard__variant--available{% else %}ProductCard__variant--unavailable{% endif %}">
+                  <div class="js-option {% unless variant.available %}ProductCard__sold-out__button{% endunless %}" data-add-to-cart="" data-ruched="false" data-ribbed="false" data-crinkle="false" data-fabric-type="" data-compare-price="" data-final="false" data-variant-id="{{ variant.id }}" data-available="{% if variant.available %}true{% else %}false{% endif %}">{{ variant.options[option_position] }}</div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="QuickAdd__trigger--mobile">
+      <button class="button button--small" data-product-url="{{ card_url }}">
+        {{ 'products.product.choose_options' | t }}
+        {% render 'icon', icon: 'cart-alt' %}
+      </button>
+    </div>
+  </div>
+</cart-quick-add>

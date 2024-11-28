@@ -1,0 +1,51 @@
+<script {{ attributes }}>
+  {
+    "title": "{{ product.title }}",
+    "available": {{ product.available | json }},
+    {%- if product.compare_at_price -%}
+    "compare_at_price": {{ product.compare_at_price | default: null }},
+    "compare_at_price_max": {{ product.compare_at_price_max | default: null }},
+    "compare_at_price_min": {{ product.compare_at_price_min | default: null }},
+    "compare_at_price_varies": {{ product.compare_at_price_varies | json }},
+    {%- endif -%}
+    "handle": "{{ product.handle }}",
+    "id": {{ product.id }},
+    "options": {{ product.options | json }},
+    "price": {{ product.price | default: null }},
+    "price_max": {{ product.price_max | default: null }},
+    "price_min": {{ product.price_min | default: null }},
+    "price_varies": {{ product.price_varies | json }},
+    "variants": [
+      {% for variant in product.variants %}
+      {
+        "id": {{ variant.id }},
+        "title": "{{ variant.title }}",
+        "name": "{{ variant.name }}",
+        "price": {{ variant.price }},
+        {%- if variant.compare_at_price -%}
+        "compare_at_price": {{ variant.compare_at_price | default: null }},
+        {%- else -%}
+        "compare_at_price": null,
+        {%- endif -%}
+        "available": {{ variant.available | json }},
+        "sku": "{{ variant.sku }}",
+        "options": {{ variant.options | json }},
+        "option1": "{{ variant.option1 }}",
+        "option2": "{{ variant.option2 }}",
+        "option3": "{{ variant.option3 }}",
+        "inventory_quantity": {{ variant.inventory_quantity }}
+      }{% if forloop.last == false %},{% endif %}
+      {% endfor %}
+    ],
+    "type": "{{ product.type }}",
+    "vendor": "{{ product.vendor }}",
+    "option_with_values": [
+      {% for option in product.options_with_values %}
+      {
+        "name": "{{ option.name }}",
+        "values": {{ option.values | json }}
+      }{% if forloop.last == false %},{% endif %}
+      {% endfor %}
+    ]
+  }
+</script>

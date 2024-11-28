@@ -1,0 +1,381 @@
+{%- liquid
+  assign top_products_type = 'CROPS, SURF CORP, SURF TOP, SWIM TOP, TANK TOP'
+  assign bottom_products_type = 'LEGGINGS, SHORTS, SURF BOTTOM, SWIM BOTTOM'
+  assign product = section.settings.product
+  assign product_type = product.type | upcase
+
+  assign is_main_product_top = true
+  if bottom_products_type contains product_type
+    assign is_main_product_top = false
+  endif
+
+  if product_type == blank or product_type == ''
+    assign is_main_product_top = true
+  endif
+
+  assign products_top = product.metafields.mix_and_match.product.value.products_top.value
+  assign products_bottom = product.metafields.mix_and_match.product.value.products_bottom.value
+
+  assign products_top_size = 0
+  assign products_bottom_size = 0
+
+  for _ in products_top
+    assign products_top_size = forloop.length
+    break 
+  endfor
+
+  for _ in products_bottom
+    assign products_bottom_size = forloop.length
+    break 
+  endfor
+
+  assign image_index = section.settings.image_index
+
+  assign visibility = false
+  if product
+    assign visibility = true
+  endif
+  if products_top_size == 0 or products_bottom_size == 0
+    assign visibility = false
+  endif
+-%}
+
+{% if visibility %}
+  {%- style -%}
+    #shopify-section-{{ section.id }} {
+      --section-padding-top: {{ section.settings.padding_top }}px;
+      --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  {%- endstyle -%}
+
+  <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-product-grid.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'section-recently-viewed-products.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'splide.min.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'section-mix-and-match.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
+  {%- if settings.quick_view_enabled and section.settings.enable_quick_view -%}
+    <link rel="stylesheet" href="{{ 'section-main-product.css' | asset_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+  {%- endif -%}
+
+  <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'component-product-grid.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'section-recently-viewed-products.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'splide.min.css' | asset_url | stylesheet_tag }}</noscript>
+  <noscript>{{ 'section-mix-and-match.css' | asset_url | stylesheet_tag }}</noscript>
+
+  <script src="{{ 'mix-and-match.js' | asset_url }}" defer="defer"></script>
+  <mix-match-component class="recently-viewed-products" data-url="{{ routes.search_url }}?section_id={{ section.id }}&type=product&q="{% if request.page_type == 'product' %} data-product-id="{{ product.id }}"{% endif %}>
+    <script data-src="{{ 'splide.min.js' | asset_url }}"></script>
+    <div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+      <div class="page-width">
+        <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.heading_alignment }}">
+          <{{ section.settings.heading_tag }} class="title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</{{ section.settings.heading_tag }}>
+        </div>
+        <div class="mix-match--wrapper">
+          <div class="mix-match--data">
+            <div class="mix-match--data-heading">
+              <p>Choose Your Size</p>
+            </div>
+            <div class="mix-match--product-detail mix-match-top">
+              <div class="mix-match--header">
+                <div class="mix-match--type mix-match--type-top">Top</div>
+                <div class="mix-match--price mix-match--price-top"></div>
+              </div>
+              <div class="mix-match--product-title mix-match--title-top">
+                <h3>Random product title</h3>
+              </div>
+              <div class="mix-match--option-selector">
+                <div class="mix-match--option" data-id="productTop" data-top>
+                  <div class="mix-match--option-label">Size</div>
+                  <ul class="mix-match--option-list"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="mix-match--product-detail mix-match-bottom">
+              <div class="mix-match--header">
+                <div class="mix-match--type mix-match--type-bottom">Bottom</div>
+                <div class="mix-match--price mix-match--price-bottom"></div>
+              </div>
+              <div class="mix-match--product-title mix-match--title-bottom">
+                <h3>Random product title</h3>
+              </div>
+              <div class="mix-match--option-selector">
+                <div class="mix-match--option" data-id="productBottom" data-bottom>
+                  <div class="mix-match--option-label">Size</div>
+                  <ul class="mix-match--option-list"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="mix-match--actions">
+              <div class="mix-match--total">
+                <span class="mix-match--total-heading">Total</span>
+                <span class="mix-match--total-amount"></span>
+              </div>
+              <div class="mix-match--atc-wrapper">
+                <div class="mix-match--error variant--error hidden">Please select top and bottom sizes</div>
+                <div class="mix-match--error mix-match--cart-error hidden"></div>
+                <button class="button button--ful-width" type="button" data-submit>
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mix-match--sliders">
+            <div class="mix-match--sliders-labels">
+              <div class="label-selection">
+                <p>Your Selection</p>
+              </div>
+              <div class="label--available-options">
+                <p>Options</p>
+              </div>
+            </div>
+            <div class="slider-top">
+              <div class="splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    {%- if is_main_product_top -%}
+                      {%- liquid
+                        assign image = product.images[image_index]
+
+                        unless image
+                          assign image = product.featured_media.preview_image
+                        endunless
+                      -%}
+                      <li class="splide__slide">
+                        {%- render 'product-data-custom', product: product, attributes: 'data-product-data type="application/json"' -%}
+                        <div class="media media--square">
+                          <img src="{{ image |  image_url: width: 600 }}" alt="{{ image.alt | escape }}" width="600"
+                          height="{{ 600 | divided_by: image.aspect_ratio | ceil }}" loading="lazy">
+                        </div>
+                      </li>
+                    {%- endif -%}
+                    {%- for _product in products_top -%}
+                      {%- liquid
+                        assign image = _product.images[image_index]
+
+                        unless image
+                          assign image = _product.featured_media.preview_image
+                        endunless
+                      -%}
+                      <li class="splide__slide">
+                        {%- render 'product-data-custom', product: _product, attributes: 'data-product-data type="application/json"' -%}
+                        <div class="media media--square">
+                          <img src="{{ image |  image_url: width: 600 }}" alt="{{ image.alt | escape }}" width="600"
+                          height="{{ 600 | divided_by: image.aspect_ratio | ceil }}" loading="lazy">
+                        </div>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="slider-bottom">
+              <div class="splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    {%- unless is_main_product_top -%}
+                      {%- liquid
+                        assign image = product.images[image_index]
+
+                        unless image
+                          assign image = product.featured_media.preview_image
+                        endunless
+                      -%}
+                      <li data-is-main-top="{{ is_main_product_top }}" class="splide__slide" data-title="{{ product.title }}">
+                        {%- render 'product-data-custom', product: product, attributes: 'data-product-data type="application/json"' -%}
+                        <div class="media media--square">
+                          <img src="{{ image |  image_url: width: 600 }}" alt="{{ image.alt | escape }}" width="600"
+                          height="{{ 600 | divided_by: image.aspect_ratio | ceil }}" loading="lazy">
+                        </div>
+                      </li>
+                    {%- endunless -%}
+                    {% for _product in products_bottom %}
+                      {%- liquid
+                        assign image = _product.images[image_index]
+
+                        unless image
+                          assign image = _product.featured_media.preview_image
+                        endunless
+                      -%}
+                      <li class="splide__slide">
+                        {%- render 'product-data-custom', product: _product, attributes: 'data-product-data type="application/json"' -%}
+                        <div class="media media--square">
+                          <img src="{{ image | image_url: width: 600 }}" alt="{{ image.alt | escape }}" width="600"
+                          height="{{ 600 | divided_by: image.aspect_ratio | ceil }}" loading="lazy">
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mix-match-component>
+{%- endif -%}
+{% schema %}
+  {
+    "name": "t:sections.mix-and-match-products.name",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product",
+        "label": "t:sections.mix-and-match-products.settings.source.label"
+      },
+      {
+        "type": "number",
+        "id": "image_index",
+        "label": "t:sections.mix-and-match-products.settings.image_index.label",
+        "info": "t:sections.mix-and-match-products.settings.image_index.info",
+        "default": 1
+      },
+      {
+        "type": "paragraph",
+        "content": "t:sections.mix-and-match-products.settings.paragraph.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_divider",
+        "default": false,
+        "label": "t:sections.all.show_divider.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.heading.label"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "Mix and match",
+        "label": "t:sections.all.heading.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_alignment",
+        "label": "t:sections.all.heading_alignment.label",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.all.heading_alignment.options__1.label"
+          },
+          {
+            "value": "center",
+            "label": "t:sections.all.heading_alignment.options__2.label"
+          },
+          {
+            "value": "right",
+            "label": "t:sections.all.heading_alignment.options__3.label"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_tag.options__1.label"
+          },
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_tag.options__2.label"
+          },
+          {
+            "value": "h3",
+            "label": "t:sections.all.heading_tag.options__3.label"
+          },
+          {
+            "value": "h4",
+            "label": "t:sections.all.heading_tag.options__4.label"
+          },
+          {
+            "value": "h5",
+            "label": "t:sections.all.heading_tag.options__5.label"
+          },
+          {
+            "value": "h6",
+            "label": "t:sections.all.heading_tag.options__6.label"
+          },
+          {
+            "value": "div",
+            "label": "t:sections.all.heading_tag.options__7.label"
+          },
+          {
+            "value": "span",
+            "label": "t:sections.all.heading_tag.options__8.label"
+          },
+          {
+            "value": "p",
+            "label": "t:sections.all.heading_tag.options__9.label"
+          }
+        ],
+        "default": "h2",
+        "label": "t:sections.all.heading_tag.label",
+        "info": "t:sections.all.heading_tag.info"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.header.content"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "t:sections.all.padding.padding_top.unit",
+        "label": "t:sections.all.padding.padding_top.label",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "t:sections.all.padding.padding_bottom.unit",
+        "label": "t:sections.all.padding.padding_bottom.label",
+        "default": 36
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.mix-and-match-products.presets.name"
+      }
+    ],
+    "disabled_on": {
+      "groups": ["header", "footer", "custom.overlay"]
+    }
+  }
+  {% endschema %}

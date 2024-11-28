@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer-group.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "SUPPORT",
+            "menu": "footer"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "KAVALA",
+            "menu": "kavala"
+          }
+        },
+        "link_list_zwGeED": {
+          "type": "link_list",
+          "settings": {
+            "heading": "COLLECTIVE",
+            "menu": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "link_list_zwGeED"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "show_divider": true,
+        "newsletter_enable": true,
+        "newsletter_heading": "Become a VIP!",
+        "newsletter_text": "<p>Be the first to know our new releases, latest on sales and more!</p>",
+        "return_url": "",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "social_heading": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": true,
+        "copyright_text": "",
+        "colors_text": "#444444",
+        "colors_heading": "#444444",
+        "colors_link": "#444444",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": ""
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

@@ -1,0 +1,176 @@
+.feature__box .banner__text {
+  margin-block-start: 0.81em;
+}
+
+@media screen and (min-width: 750px) {
+  .product__features.grid.grid--4-col-tablet > .grid__item {
+    max-width: calc(25% - var(--grid-horizontal-spacing) * 3 / 4);
+  }
+
+  .product__features.grid.grid--3-col-tablet > .grid__item {
+    max-width: calc(33.33% - var(--grid-horizontal-spacing) * 2 / 3);
+  }
+
+  .product__features.grid.grid--2-col-tablet > .grid__item {
+    max-width: calc(50% - var(--grid-horizontal-spacing) / 2);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .product__features.grid.grid--4-col-desktop > .grid__item {
+    max-width: calc(25% - var(--grid-horizontal-spacing) * 3 / 4);
+  }
+
+  .product__features.grid.grid--3-col-desktop > .grid__item {
+    max-width: calc(33.33% - var(--grid-horizontal-spacing) * 2 / 3);
+  }
+}
+
+.product_features--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.product_features--grid_item {
+  position: relative;
+  padding: 0;
+}
+
+.product_features--grid_item .feature__box {
+  border: 1px solid rgb(var(--color-border));
+  border-radius: 20px;
+  height: 100%;
+}
+
+.product_features--grid_item-1 {
+  grid-column: span 2;
+  grid-row: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0; /* Remove padding to ensure video takes full space */
+}
+
+.product_features--grid_item-1 .deferred-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+}
+
+/* Two columns in each row for non-video items */
+.product_features--grid_item:not(.product_features--grid_item-1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_features--grid_item:not(.product_features--grid_item-1) .feature__box {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f7f5ef;
+}
+
+.feature__box {
+  position: relative;
+}
+
+.feature__box .banner__subheading.h6 {
+  margin-block: .5em;
+  line-height: inherit;
+}
+
+.feature__box .banner__heading{
+  margin-top: 0;
+}
+
+/* Desktop CSS */
+
+@media screen and (min-width: 750px) {
+  .product_features--grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 3rem;
+  }
+
+  .product_features--grid_item:not(.product_features--grid_item-1) {
+    padding: 2rem;
+  }
+
+  .product_features--grid_item-1 .deferred-media {
+    aspect-ratio: 9/16;
+  }
+
+  .product_features--grid_item-1 {
+    grid-column: 2;
+    grid-row: span 2;
+  }
+
+  .product_features--grid_item-2 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .product_features--grid_item-3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .product_features--grid_item-4 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .product_features--grid_item-5 {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .product_features--grid_item:not(.product_features--grid_item-1) .feature__box {
+    display: block;
+    height: auto;
+  }
+
+  .product_features--grid_item:not(.product_features--grid_item-1) .feature__box::before {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 1px;
+    top: calc(50% - 1px);
+    background-color: rgb(var(--color-border));
+  }
+
+  .product_features--grid_item.product_features--grid_item-2 .feature__box::before,
+  .product_features--grid_item.product_features--grid_item-4 .feature__box::before {
+    right: -2rem;
+  }
+
+  .product_features--grid_item.product_features--grid_item-3 .feature__box::before,
+  .product_features--grid_item.product_features--grid_item-5 .feature__box::before {
+    left: -2rem;
+  }
+
+  .feature__box .banner__subheading.h6 {
+    margin-block: 1em;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .product_features--grid_item-1 {
+    aspect-ratio: 9/16;
+  }
+
+  .feature__box .banner__heading{
+    font-size: calc(var(--font-heading-scale) * 1.5rem);
+  }
+
+  .feature__box .banner__text {
+    font-size: calc(var(--font-heading-scale) * 1.2rem);
+  }
+}

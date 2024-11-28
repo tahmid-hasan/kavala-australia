@@ -1,0 +1,94 @@
+nav-tabs .navtabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+nav-tabs .navtab {
+  --color-foreground: 255, 255, 255;
+  --color-button-background: 255, 255, 255;
+  --color-button-text: 26, 27, 24;
+  --color-button-border: var(--color-button-background);
+  --color-shadow: var(--color-foreground);
+  --shadow-opacity: 0.3;
+  transition-duration: 0ms;
+  transition:none;
+  
+  margin: 0 10px;
+  cursor: pointer;
+  min-width: auto;
+  /* color: #333;
+  transition: color 0.3s; */
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+}
+
+nav-tabs .button.navtab:hover {
+  
+}
+
+nav-tabs .button.navtab:hover::after {
+  animation:none;
+}
+
+nav-tabs .navtab:hover {
+  /* color: #007BFF; */
+}
+
+nav-tabs .navtab.active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+nav-tabs .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: #007BFF;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+nav-tabs .content {
+  display: none;
+  text-align: center;
+}
+
+nav-tabs .content.active {
+  display: block;
+}
+
+nav-tabs .footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #000;
+  transition: color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav-tabs .footer a {
+  background: linear-gradient(145deg, #007aff, #005bb5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+nav-tabs .footer a:hover {
+  color: linear-gradient(145deg, #007aff, #005bb5);
+}
+
+@media only screen and (min-width: 750px) {
+  nav-tabs .navtab {
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,1125 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_D9AY8J": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumb {font-size: 10px; color: #666666; text-transform: uppercase;}",
+        ".breadcrumb .link {font-size: 10px; color: #666666; text-transform: uppercase; text-decoration: none;}",
+        ".breadcrumb__divider {color: #666666;}",
+        ".breadcrumb .link:hover {color: #666666;}"
+      ],
+      "settings": {
+        "custom_liquid": "<!-- Other content -->\n{% render 'breadcrumbs' %}\n<main>\n  <!-- Main content -->\n</main>",
+        "full_width": false,
+        "show_divider": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "1716262846cf81797d": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_rating_xybjpt": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_rating_xybjpt"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_DWLbtC": {
+      "type": "rich-text",
+      "blocks": {
+        "text_8r4V4E": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.product_page_description.value }}</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "highlight_phrases": "",
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "text_8r4V4E"
+      ],
+      "custom_css": [
+        "p {font-size: 14px; padding-right: 3px;}"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 4,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "countdown": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "heading": "Hurry up ! Sale end in:",
+            "number_size": "compact",
+            "colors_heading": "#da3f3f",
+            "colors_text": "#da3f3f",
+            "colors_background": "#ffeeee"
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+            "price_size": "medium",
+            "show_badges": true,
+            "sale_badge_basis": "auto"
+          }
+        },
+        "breadcrumb": {
+          "type": "breadcrumb",
+          "disabled": true,
+          "settings": {
+            "text_style": "uppercase",
+            "show_divider": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": true,
+            "price_size": "small"
+          }
+        },
+        "loox_reviews_loox_rating_8XrgTg": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "text_fTmynM": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "{{ product.metafields.custom.product_check_marks_line_1_.value }}",
+            "text_style": "body"
+          }
+        },
+        "text_bPHMqd": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "text": "{{ product.metafields.custom.product_check_marks_line_2_.value }}",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "swatches_source": "file",
+            "swatch_type": "round",
+            "enable_swatch_cross": true,
+            "enable_swatch_unavailable_click": false,
+            "size_chart": ""
+          }
+        },
+        "sibling_products_fcVJe8": {
+          "type": "sibling_products",
+          "settings": {
+            "option_name": "Colour",
+            "option_value_metafield": "custom.sibling_colour",
+            "collection_handle_metafield": "custom.sibling_collection_handle_",
+            "enable_color_swatches": true,
+            "swatch_type": "round",
+            "swatches_source": "file"
+          }
+        },
+        "popup_a46N4j": {
+          "type": "popup",
+          "settings": {
+            "icon": "ruler",
+            "link_label": "Need help with your size?",
+            "page": "need-help-with-your-size"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 20,
+            "show_inventory_transfer": true,
+            "color_scheme": "accent-1"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "collapsible_tab_39JQmT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Style",
+            "content": "<p>{{ product.metafields.custom.tab_content_style | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_VxG8Up": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Collection",
+            "content": "<p>{{ product.metafields.custom.tab_content_collection | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_dYcH4B": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Size & Fit",
+            "content": "<p>{{ product.metafields.custom.tab_content_size_fit_text_ | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "{% if product.metafields.custom.tab_content_size_fit_image_.value != blank %}{{ product.metafields.custom.tab_content_size_fit_image_ | image_url: width: 1000 | image_tag  }} {% endif %}",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_JH6E8F": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Fabric",
+            "content": "<p>{{ product.metafields.custom.tab_content_fabric | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_nW7qCn": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Sustainability",
+            "content": "<p>{{ product.metafields.custom.tab_content_sustainability | metafield_tag }}</p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_9Jyc7G": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Shipping & Returns",
+            "content": "<p>Free Standard Shipping on orders over $150.<br/><a href=\"/policies/shipping-policy\" title=\"Shipping Policy\">See Shipping Details</a></p><p><strong>Delivery<br/></strong>Please see our shipping information for delivery timelines.<br/><a href=\"/policies/shipping-policy\" title=\"Shipping Policy\">See Shipping Details</a></p><p><strong>Returns</strong><br/>Sale items marked at 50% off or greater are final sale.<br/><a href=\"/policies/shipping-policy\" title=\"Shipping Policy\">See Shipping Details</a></p>",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "related_buttons": {
+          "type": "related_buttons",
+          "settings": {
+            "show_icons": false
+          }
+        },
+        "sticky_cart": {
+          "type": "sticky_cart",
+          "settings": {
+            "show_quantity_selector": true
+          }
+        }
+      },
+      "block_order": [
+        "countdown",
+        "price",
+        "breadcrumb",
+        "title",
+        "loox_reviews_loox_rating_8XrgTg",
+        "text_fTmynM",
+        "text_bPHMqd",
+        "variant_picker",
+        "sibling_products_fcVJe8",
+        "popup_a46N4j",
+        "buy_buttons",
+        "inventory_status",
+        "description",
+        "collapsible_tab_39JQmT",
+        "collapsible_tab_VxG8Up",
+        "collapsible_tab_dYcH4B",
+        "collapsible_tab_JH6E8F",
+        "collapsible_tab_nW7qCn",
+        "collapsible_tab_9Jyc7G",
+        "related_buttons",
+        "sticky_cart"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "media_size": "large",
+        "gallery_layout": "columns",
+        "image_ratio": "adapt_first",
+        "show_featured_media": false,
+        "show_thumbnails": true,
+        "hide_variants": false,
+        "enable_image_zoom": false,
+        "enable_video_looping": false,
+        "mobile_image_ratio": "adapt_first",
+        "show_mobile_thumbnails": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "guarantees": {
+      "type": "guarantees",
+      "blocks": {
+        "guarantee-0": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "truck",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Free Shipping",
+            "title_size": "h4",
+            "text": "<p>On all orders over $150</p>"
+          }
+        },
+        "guarantee-1": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "chat_bubble",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Customer Support",
+            "title_size": "h4",
+            "text": "<p>Email for any questions</p>"
+          }
+        },
+        "guarantee-2": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "price_tag",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Flexible Payment",
+            "title_size": "h4",
+            "text": "<p>AfterPay, ZipPay & more</p>"
+          }
+        },
+        "guarantee-3": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "return",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Easy Returns",
+            "title_size": "h4",
+            "text": "<p>Within 30 days for an exchange</p>"
+          }
+        }
+      },
+      "block_order": [
+        "guarantee-0",
+        "guarantee-1",
+        "guarantee-2",
+        "guarantee-3"
+      ],
+      "settings": {
+        "layout": "default",
+        "column_alignment": "left",
+        "horizontal_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "columns_desktop": 4,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "use_custom_colors": false,
+        "colors_icon": "#ffffff",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 60,
+        "padding_bottom": 28
+      }
+    },
+    "video_product_features_jaEzYE": {
+      "type": "video-product-features",
+      "blocks": {
+        "product_feature_EFJfJa": {
+          "type": "product-feature",
+          "settings": {
+            "heading": "{{ product.metafields.custom.usp_heading_1.value }}",
+            "heading_tag": "h3",
+            "subheading": "",
+            "text": "<p>{{ product.metafields.custom.usp_copy_1 | metafield_tag }}</p>",
+            "text_size": "typeset"
+          }
+        },
+        "product_feature_Px9EiE": {
+          "type": "product-feature",
+          "settings": {
+            "heading": "{{ product.metafields.custom.usp_heading_2.value }}",
+            "heading_tag": "h3",
+            "subheading": "",
+            "text": "<p>{{ product.metafields.custom.usp_copy_2 | metafield_tag }}</p>",
+            "text_size": "typeset"
+          }
+        },
+        "product_feature_PbYm6a": {
+          "type": "product-feature",
+          "settings": {
+            "heading": "{{ product.metafields.custom.usp_heading_3.value }}",
+            "heading_tag": "h3",
+            "subheading": "",
+            "text": "<p>{{ product.metafields.custom.usp_copy_3 | metafield_tag }}</p>",
+            "text_size": "typeset"
+          }
+        },
+        "product_feature_hQF4jD": {
+          "type": "product-feature",
+          "settings": {
+            "heading": "{{ product.metafields.custom.usp_heading_4.value }}",
+            "heading_tag": "h3",
+            "subheading": "",
+            "text": "<p>{{ product.metafields.custom.usp_copy_4 | metafield_tag }}</p>",
+            "text_size": "typeset"
+          }
+        }
+      },
+      "block_order": [
+        "product_feature_EFJfJa",
+        "product_feature_Px9EiE",
+        "product_feature_PbYm6a",
+        "product_feature_hQF4jD"
+      ],
+      "settings": {
+        "enable_video_looping": false,
+        "video": "{{ product.metafields.custom.usp_product_video.value }}",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "mix_and_match_tGqNpK": {
+      "type": "mix-and-match",
+      "custom_css": [
+        "h2 {font-family: \"Yeseva One\", serif; font-weight: 400; font-style: normal; letter-spacing: 2px;}"
+      ],
+      "settings": {
+        "product": "{{ product }}",
+        "image_index": 1,
+        "show_divider": false,
+        "heading": "MIX & MATCH",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_BTn9QM": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<script async type=\"text/javascript\" src=\"//asset.fwcdn3.com/js/embed-feed.js\"></script>\n\n<fw-embed-feed\n  channel=\"kavala_collective_australia\"\n  playlist=\"5DNX6g\"\n  style=\"--fw-thumbnail-font-size: 18px\"\n  mode=\"row\"\n  open_in=\"default\"\n  max_videos=\"0\"\n  placement=\"middle\"\n  player_placement=\"bottom-right\"\nbranding=\"false\"\n></fw-embed-feed>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1716446232d5375325": {
+      "type": "apps",
+      "blocks": {
+        "firework_virtual_store_firework_embed_product_6jkJ6g": {
+          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-embed-product/347a2e4c-f5cb-410d-8354-490d1e80558c",
+          "settings": {
+            "channel": "kavala_collective_australia",
+            "video_option": "match_videos",
+            "playlist": "{{ product.metafields.custom.lifestyle_video_playlist.value }}",
+            "layout": "carousel",
+            "embedtitle": "",
+            "titlealignment": "center",
+            "embedtitlesize": 20,
+            "size": "large",
+            "player_placement": "bottom-right",
+            "hashtag": "",
+            "pip": true
+          }
+        }
+      },
+      "block_order": [
+        "firework_virtual_store_firework_embed_product_6jkJ6g"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "tab_collage_GGGWYq": {
+      "type": "tab-collage",
+      "blocks": {
+        "image_b4Ac6F": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Paradiso_Onyx_Tava_Top___Paradiso_Onyx_Samet_Bottom_5_copy.jpg",
+            "image_position": "center center",
+            "heading": "Buttery-Soft Fabric",
+            "description": "<p>Created with the most comfortable and supportive fabric, you'll never want to take these babies off.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_FzUiin": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1.ElysianPrintZepherSurfSuitWebsitePhotos.png",
+            "image_position": "center center",
+            "heading": "One-of-a-Kind Prints",
+            "description": "<p>Feel feminine and confident in our one of a kind prints designed to make you stand out and turn heads.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_tLzzAM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0125.jpg",
+            "image_position": "center center",
+            "heading": "Flattering Fits",
+            "description": "<p>Each style is consciously designed to support and flatter your body in all of your fave activities. </p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        },
+        "image_3tfRwa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OnyxRhodesBikerShortWebsitePhoto3.png",
+            "image_position": "center center",
+            "heading": "From Sea to Studio",
+            "description": "<p>All our pieces are designed to be worn from yoga straight into the surf with both style & functionality in mind. </p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "image_b4Ac6F",
+        "image_FzUiin",
+        "image_tLzzAM",
+        "image_3tfRwa"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "500px",
+        "make_collapsible_rows": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_layout": "text_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "200px",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#444444",
+        "colors_text": "#444444",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_kxwVPF": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<script async type=\"text/javascript\" src=\"//asset.fwcdn3.com/js/embed-feed.js\"></script>\n\n<fw-embed-feed\n  channel=\"kavala_collective_australia\"\n  playlist=\"ojNEYo\"\n  style=\"--fw-thumbnail-font-size: 18px\"\n  mode=\"row\"\n  open_in=\"default\"\n  max_videos=\"0\"\n  placement=\"middle\"\n  player_placement=\"bottom-right\"\nbranding=\"false\"\n></fw-embed-feed>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "apps_Ynn7Hi": {
+      "type": "apps",
+      "blocks": {
+        "firework_virtual_store_firework_embed_product_7DeYtN": {
+          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-embed-product/347a2e4c-f5cb-410d-8354-490d1e80558c",
+          "settings": {
+            "channel": "kavala_collective_australia",
+            "video_option": "match_videos",
+            "playlist": "{{ product.metafields.custom.testimonial_video_playlist.value }}",
+            "layout": "carousel",
+            "embedtitle": "",
+            "titlealignment": "center",
+            "embedtitlesize": 20,
+            "size": "large",
+            "player_placement": "bottom-right",
+            "hashtag": "",
+            "pip": true
+          }
+        }
+      },
+      "block_order": [
+        "firework_virtual_store_firework_embed_product_7DeYtN"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1716441612d68b7b9a": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_video_slider_zMwFxX": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-video-slider/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "show-by-tag": true,
+            "layout": "spotlight",
+            "shadow": "",
+            "show-rating": true,
+            "show-reviewer-name": true,
+            "hide-arrows-mobile": true,
+            "auto-play": true,
+            "show-border": false,
+            "border-width": 1,
+            "border-radius": 16,
+            "text-color": "",
+            "rating-icon-color": "",
+            "border-color": "",
+            "play-button-color": "",
+            "shadow-color": "",
+            "product-id": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_video_slider_zMwFxX"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "apps_gtnRFW": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_jwxNLK": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1200,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_jwxNLK"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 20
+      }
+    },
+    "1715825623f43af9ef": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_list_limit": 4,
+        "show_divider": false,
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "question-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I wear Kavala activewear in the ocean?",
+            "row_content": "<p>Absolutely! Our activewear is designed with high-performance fabrics that provide flexibility and durability, making them perfect for both your yoga session and catching waves at the beach. They're stylish, comfortable, and built to keep up with your active lifestyle.</p>",
+            "page": ""
+          }
+        },
+        "question-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your sizes like?",
+            "row_content": "",
+            "page": "size-guide"
+          }
+        },
+        "collapsible_row_XiWNKy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How breathable is the activewear?",
+            "row_content": "<p>We understand the importance of staying cool and comfortable during your workouts. That's why our activewear features advanced moisture-wicking technology and breathable fabrics that keep you dry and fresh, even during the most intense workouts. Say goodbye to sweat stains and hello to unstoppable performance!</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "question-2",
+        "question-3",
+        "collapsible_row_XiWNKy"
+      ],
+      "disabled": true,
+      "settings": {
+        "open_first_collapsible_row": false,
+        "narrow": true,
+        "show_divider": false,
+        "heading": "WE'RE SO GLAD YOU ASKED!",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_qTQwmg": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_6DNWzz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ product.metafields.custom.faq_question_1.value }}",
+            "row_content": "<p>{{ product.metafields.custom.faq_answer_1.value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pqTQqn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ product.metafields.custom.faq_question_2.value }}",
+            "row_content": "<p>{{ product.metafields.custom.faq_answer_2.value }}</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Tg6qFf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{{ product.metafields.custom.faq_question_3.value }}",
+            "row_content": "<p>{{ product.metafields.custom.faq_answer_3.value }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_6DNWzz",
+        "collapsible_row_pqTQqn",
+        "collapsible_row_Tg6qFf"
+      ],
+      "settings": {
+        "open_first_collapsible_row": false,
+        "narrow": true,
+        "show_divider": false,
+        "heading": "WE'RE SO GLAD YOU ASKED!",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_XaQCUg": {
+      "type": "rich-text",
+      "blocks": {
+        "text_c3rm7V": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Can’t find the answer you’re looking for?</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_phrases": "",
+            "highlight_style": "marker"
+          }
+        },
+        "button_ytynxN": {
+          "type": "button",
+          "settings": {
+            "button_label": "CONTACT US",
+            "button_link": "shopify://pages/contact",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "text_c3rm7V",
+        "button_ytynxN"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 84
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "disabled": true,
+      "settings": {
+        "show_divider": false,
+        "heading": "Recently Viewed",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop The Insta'",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Take Us On Your Endless Adventures<br/><a href=\"https://instagram.com/kavalacollective\"><strong>@kavalacollective</strong></a></p>",
+            "text_size": "typeset",
+            "secondary_color": true,
+            "highlight_phrases": "",
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-family: \"Yeseva One\", serif; font-weight: 400; font-size: 21px; font-style: normal; letter-spacing: 2px;}",
+        "p {font-size: 15px;}"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_txTWh4": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/BN.png",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "video_hero_edWaTY": {
+      "type": "video-hero",
+      "blocks": {
+        "heading_4xBcEy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video hero",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4xBcEy"
+      ],
+      "disabled": true,
+      "settings": {
+        "video": "shopify://files/videos/Paradiso Campaign.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "500px",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 0,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "video_product_features_MaenqX": {
+      "type": "video-product-features",
+      "blocks": {
+        "product_feature_JbYNnc": {
+          "type": "product-feature",
+          "settings": {
+            "heading": "Luxe Activewear Fabric",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text": "<p>Experience the buttery-soft feel of our luxurious new activewear fabric. It's designed to provide unparalleled comfort on your skin.</p>",
+            "text_size": "typeset"
+          }
+        },
+        "product_feature_XAYBW3": {
+          "type": "product-feature",
+          "settings": {
+            "heading": "Seamless Front Design",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text": "<p>Move freely without any irritation. Our completely seamless front ensures maximum comfort and flexibility during any activity.</p>",
+            "text_size": "typeset"
+          }
+        },
+        "product_feature_Rr4fdr": {
+          "type": "product-feature",
+          "settings": {
+            "heading": "Built-in Sports Bra",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text": "<p>Enjoy the support of a built-in sports bra with removable padding. The scoop neck front adds a stylish touch while keeping you secure.</p>",
+            "text_size": "typeset"
+          }
+        },
+        "product_feature_tgjGym": {
+          "type": "product-feature",
+          "settings": {
+            "heading": "Perfect Length Shorts",
+            "heading_tag": "h2",
+            "subheading": "",
+            "text": "<p>With a 4.5\" inseam, our shorts are the ideal length for any workout. They offer both style and l practicality, making this the most flattering onesie on the market.</p>",
+            "text_size": "typeset"
+          }
+        }
+      },
+      "block_order": [
+        "product_feature_JbYNnc",
+        "product_feature_XAYBW3",
+        "product_feature_Rr4fdr",
+        "product_feature_tgjGym"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "show_divider": false,
+        "heading": "Video",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_D9AY8J",
+    "1716262846cf81797d",
+    "rich_text_DWLbtC",
+    "main",
+    "guarantees",
+    "video_product_features_jaEzYE",
+    "mix_and_match_tGqNpK",
+    "custom_liquid_BTn9QM",
+    "1716446232d5375325",
+    "tab_collage_GGGWYq",
+    "custom_liquid_kxwVPF",
+    "apps_Ynn7Hi",
+    "1716441612d68b7b9a",
+    "apps_gtnRFW",
+    "1715825623f43af9ef",
+    "product-recommendations",
+    "collapsible-content",
+    "collapsible_content_qTQwmg",
+    "rich_text_XaQCUg",
+    "recently-viewed-products",
+    "rich-text",
+    "image_banner_txTWh4",
+    "video_hero_edWaTY",
+    "video_product_features_MaenqX"
+  ]
+}

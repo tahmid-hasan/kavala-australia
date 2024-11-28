@@ -1,0 +1,1255 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_kxE8jJ": {
+      "type": "slideshow",
+      "blocks": {
+        "image_jA4iH6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLNS.jpg",
+            "image_mobile": "shopify://shop_images/GLNS.gif",
+            "image_position": "center center",
+            "text_box_position": "bottom-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "SHOP GARDENIA",
+            "button_link": "shopify://collections/gardenia",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "image_jA4iH6"
+      ],
+      "settings": {
+        "slideshow_type": "legacy",
+        "text_alignment": "center",
+        "image_ratio": "adapt_first",
+        "autorotate": true,
+        "autorotate_speed": 7,
+        "full_width": true,
+        "image_behavior": "none",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "600px",
+        "show_text_below": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#fea6b6",
+        "colors_text": "#ffffff",
+        "colors_background": "#ffffff",
+        "colors_overlay": "#454745",
+        "colors_overlay_opacity": 0,
+        "colors_navigation_text": "#ffffff",
+        "colors_navigation_background": "#1a1b18",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ss_circle_menu_LpynP8": {
+      "type": "ss-circle-menu",
+      "blocks": {
+        "image_yDajmq": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/GardeniaParosOnesie8.png",
+            "bubble_text": "New Arrivals",
+            "bubble_link": "shopify://collections/new-arrivals"
+          }
+        },
+        "image_c9zVyD": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/Flower_Power_Vintage_Samet_Bottom_3.png",
+            "bubble_text": "Best-Sellers",
+            "bubble_link": "shopify://collections/best-sellers"
+          }
+        },
+        "image_N9UWWB": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/3.RhapsodyVanuatop.png",
+            "bubble_text": "Shop All",
+            "bubble_link": "shopify://collections/kavala"
+          }
+        },
+        "image_TNzrkW": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/BloomParosOnesie3.png",
+            "bubble_text": "Onesies",
+            "bubble_link": "shopify://collections/onesies"
+          }
+        },
+        "image_eHCPzn": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/Cream_Boho_Sulawesi_Surf_Suit_1_1.jpg",
+            "bubble_text": "Surf Suits",
+            "bubble_link": "shopify://collections/surf-suits"
+          }
+        },
+        "image_X3JB7y": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/BloomLaieBottom4.png",
+            "bubble_text": "Swimwear",
+            "bubble_link": "shopify://collections/all-swim"
+          }
+        },
+        "image_azyRqw": {
+          "type": "Image",
+          "settings": {
+            "bubble_img": "shopify://shop_images/Tuscany_Rhodes_Biker_Short_2.png",
+            "bubble_text": "Activewear",
+            "bubble_link": "shopify://collections/all-activewear"
+          }
+        }
+      },
+      "block_order": [
+        "image_yDajmq",
+        "image_c9zVyD",
+        "image_N9UWWB",
+        "image_TNzrkW",
+        "image_eHCPzn",
+        "image_X3JB7y",
+        "image_azyRqw"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "slider_width": 100,
+        "slider_gap": 20,
+        "slider_gap_mobile": 12,
+        "icon_size": 104,
+        "icon_size_mobile": 74,
+        "icon_space": 6,
+        "icon_space_mobile": 2,
+        "icon_border_thickness": 2,
+        "icon_square": false,
+        "is_sticky": true,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 10,
+        "text_height": 130,
+        "text_mt": 8,
+        "icon_border_color": "#000000",
+        "icon_border_gradient": "linear-gradient(43deg, rgba(239, 174, 178, 1) 4%, rgba(239, 174, 178, 1) 50%)",
+        "text_color": "#444444",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "border_gradient": "",
+        "margin_top": 12,
+        "margin_bottom": 0,
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 400,
+        "border_thickness": 0,
+        "lazy": false,
+        "hide_mobile": false,
+        "hide_desktop": false
+      }
+    },
+    "rich-text-0": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://instagram.com/kavalacollective\"><strong>@kavalacollective</strong></a> is a luxury activewear & surfwear brand inspired by the yoga, surf and wanderlust lifestyle. It is made for sweat, sand, sun and sea so wear for the juiciest yoga classes, the most hardcore workouts, the biggest surf swells, and everything in between.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_phrases": "",
+            "highlight_style": "underline"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "custom_css": [
+        "p {font-weight: 100; font-size: 16px; letter-spacing: 0px;}"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": false,
+        "use_custom_colors": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#444444",
+        "colors_text": "#444444",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#e8d5d0",
+        "gradient_background": "",
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_tab_atHQJc": {
+      "type": "featured-collection-tab",
+      "blocks": {
+        "collection_jXzmLT": {
+          "type": "collection",
+          "settings": {
+            "title": "Gardenia",
+            "collection": "gardenia",
+            "products_to_show": 12
+          }
+        },
+        "collection_LYGwWL": {
+          "type": "collection",
+          "settings": {
+            "title": "Onesies",
+            "collection": "onesies",
+            "products_to_show": 12
+          }
+        },
+        "collection_4WpKHd": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "title": "Shorts",
+            "collection": "biker-shorts",
+            "products_to_show": 12
+          }
+        }
+      },
+      "block_order": [
+        "collection_jXzmLT",
+        "collection_LYGwWL",
+        "collection_4WpKHd"
+      ],
+      "settings": {
+        "horizontal_scroll": true,
+        "show_view_all": true,
+        "enable_promo_banner": false,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_tENNcR": {
+      "type": "slideshow",
+      "blocks": {
+        "image_BzVJxV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Gardenia-GWP-D.jpg",
+            "image_mobile": "shopify://shop_images/Gardenia-GWP-M.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "image_BzVJxV"
+      ],
+      "settings": {
+        "slideshow_type": "legacy",
+        "text_alignment": "center",
+        "image_ratio": "adapt_first",
+        "autorotate": true,
+        "autorotate_speed": 7,
+        "full_width": true,
+        "image_behavior": "none",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "adapt_first",
+        "show_text_below": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#efaeb2",
+        "colors_text": "#ffffff",
+        "colors_background": "#ffffff",
+        "colors_overlay": "#454745",
+        "colors_overlay_opacity": 0,
+        "colors_navigation_text": "#ffffff",
+        "colors_navigation_background": "#1a1b18",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "mix_and_match_ighWnD": {
+      "type": "mix-and-match",
+      "custom_css": [
+        "h2 {font-family: \"Yeseva One\", serif; font-weight: 400; font-style: normal; letter-spacing: 2px;}"
+      ],
+      "settings": {
+        "product": "tuscany-seseh-crop",
+        "image_index": 1,
+        "show_divider": false,
+        "heading": "MIX & MATCH",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "tab-collage": {
+      "type": "tab-collage",
+      "blocks": {
+        "image-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TuscanyVanuaTopWebsitePhoto5.png",
+            "image_position": "center center",
+            "heading": "Buttery-Soft Fabric",
+            "description": "<p>Created with the most comfortable and supportive fabric, you'll never want to take these babies off.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        },
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GardeniaVanuaTop4.png",
+            "image_position": "center center",
+            "heading": "One-of-a-Kind Prints",
+            "description": "<p>Feel feminine and confident in our one of a kind prints designed to make you stand out and turn heads.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0125.jpg",
+            "image_position": "center center",
+            "heading": "Flattering Fits",
+            "description": "<p>Each style is consciously designed to support and flatter your body in all of your fave activities. </p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bloom_Calero_Top_Bloom_Misool_Swim_Short_2_ab940033-41e1-4c03-9c4b-2a642a35e3ec.jpg",
+            "image_position": "center center",
+            "heading": "From Sea to Studio",
+            "description": "<p>All our pieces are designed to be worn from yoga straight into the surf with both style & functionality in mind. </p>",
+            "button_label": "",
+            "button_link": "",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "image-0",
+        "image-1",
+        "image-2",
+        "image-3"
+      ],
+      "settings": {
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "500px",
+        "make_collapsible_rows": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "200px",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#444444",
+        "colors_text": "#444444",
+        "colors_border": "#a1a1a1",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "custom_liquid_EXgf4B": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script async type=\"text/javascript\" src=\"//asset.fwcdn3.com/js/embed-feed.js\"></script>\n\n<fw-embed-feed\n  channel=\"kavala_collective_australia\"\n  playlist=\"5DNX6g\"\n  style=\"--fw-thumbnail-font-size: 18px\"\n  mode=\"row\"\n  open_in=\"default\"\n  max_videos=\"0\"\n  placement=\"middle\"\n  player_placement=\"bottom-right\"\nbranding=\"false\"\n></fw-embed-feed>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "guarantees": {
+      "type": "guarantees",
+      "blocks": {
+        "guarantee-0": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "plant",
+            "icon_size": "large",
+            "image": "shopify://shop_images/2_19e2cb39-c9ef-4700-be82-f78688e0c21f.png",
+            "custom_icon": "",
+            "title": "Designed in Byron Bay",
+            "title_size": "h4",
+            "text": "<p>We have employees all over the world working remotely and living their dream lives!</p>"
+          }
+        },
+        "guarantee-1": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "globe",
+            "icon_size": "large",
+            "image": "shopify://shop_images/3_e59bbc4c-b75e-4b77-b121-7dd726c98574.png",
+            "custom_icon": "",
+            "title": "Woman Owned & Run",
+            "title_size": "h4",
+            "text": "<p>We have employees all over the world working remotely and living their dream lives!</p>"
+          }
+        },
+        "guarantee-2": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "recycle",
+            "icon_size": "large",
+            "image": "shopify://shop_images/1_0cd51102-c2e8-4505-a856-0a3eed5ec942.png",
+            "custom_icon": "",
+            "title": "Donate 1% of Sales",
+            "title_size": "h4",
+            "text": "<p>We have employees all over the world working remotely and living their dream lives!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "guarantee-0",
+        "guarantee-1",
+        "guarantee-2"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "layout": "default",
+        "column_alignment": "center",
+        "horizontal_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "columns_desktop": 3,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "use_custom_colors": false,
+        "colors_icon": "#ffffff",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 68,
+        "padding_bottom": 68
+      }
+    },
+    "video-hero": {
+      "type": "video-hero",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "KAVALA COLLECTIVE",
+            "heading_size": "h2",
+            "heading_tag": "h1"
+          }
+        },
+        "text_9bmrxw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tropical swimwear, surfwear and activewear for yoga, surf & wanderlust.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_zyAFrJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "FIND YOUR DREAM SET",
+            "button_link": "shopify://collections/all",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_9bmrxw",
+        "text",
+        "button_zyAFrJ"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Yeseva One\", serif; font-weight: 400; font-style: normal; letter-spacing: 2px;}"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/Paradiso Campaign.mp4",
+        "video_url": "",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "650px",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "400px",
+        "show_text_below": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#fea6b6",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17164410680e004c37": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_MPeqB6": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": true,
+            "hide_thumbnails": false,
+            "product_handle": "flower-power-vintage-kalani-top",
+            "aggregated": true,
+            "data-limit": 8,
+            "maxwidth": 1280,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_MPeqB6"
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 56,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_tab_8CdXQC": {
+      "type": "featured-collection-tab",
+      "blocks": {
+        "collection_TPMaXD": {
+          "type": "collection",
+          "settings": {
+            "title": "Activewear",
+            "collection": "all-activewear",
+            "products_to_show": 12
+          }
+        },
+        "collection_J4yYHR": {
+          "type": "collection",
+          "settings": {
+            "title": "Swimwear",
+            "collection": "all-swim",
+            "products_to_show": 12
+          }
+        }
+      },
+      "block_order": [
+        "collection_TPMaXD",
+        "collection_J4yYHR"
+      ],
+      "settings": {
+        "horizontal_scroll": true,
+        "show_view_all": true,
+        "enable_promo_banner": false,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 68
+      }
+    },
+    "video_hero_czETTg": {
+      "type": "video-hero",
+      "blocks": {
+        "heading_HxnGDJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE KAVALA VIBE",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_KrUQPg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Set the scene for your tropical escape with Kavala’s vacation ready playlist!</p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "custom_liquid_FPMPh6": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Kavala Radio</title>\n<style>\n  .spotify-embed {\n    position: relative;\n    z-index: 20;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-top: 8px;\n  }\n  .spotify-embed__toggle {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 8px;\n    padding: 10px 30px; /* Made button 10px wider */\n    border-radius: 9999px;\n    background-color: #FEA6B6;\n    color: #ffffff;\n    cursor: pointer;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  }\n  .spotify-embed__toggle svg {\n    fill: black;\n  }\n  .spotify-frame {\n    opacity: 0;\n    pointer-events: none;\n    max-height: 0;\n    transition: all 0.3s ease-in-out;\n    overflow: hidden;\n    width: 100%;\n    margin-top: 10px; /* Added gap of 10px */\n  }\n  .spotify-frame.open {\n    opacity: 1;\n    pointer-events: auto;\n    max-height: 200px; /* Adjust based on iframe height */\n  }\n</style>\n</head>\n<body>\n\n<div class=\"spotify-embed\">\n  <div class=\"spotify-embed__toggle\" onclick=\"toggleSpotify()\">\n    <div>Kavala Radio</div>\n    <svg width=\"21\" height=\"21\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"10.5\" cy=\"10.5\" r=\"10\" fill=\"#ffffff\" stroke=\"#ffffff\"></circle>\n      <path d=\"M13.7742 10.3871L8.69355 13.3204L8.69355 7.45378L13.7742 10.3871Z\" fill=\"black\"></path>\n    </svg>\n  </div>\n  <div id=\"spotify-frame\" class=\"spotify-frame\">\n   <iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/playlist/37i9dQZF1E8McTcQ7p9uzv?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>\n  </div>\n</div>\n\n<script>\n  function toggleSpotify() {\n    const spotifyFrame = document.getElementById('spotify-frame');\n    spotifyFrame.classList.toggle('open');\n  }\n</script>\n\n</body>\n</html>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HxnGDJ",
+        "text_KrUQPg",
+        "custom_liquid_FPMPh6"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Yeseva One\", serif; font-weight: 400; font-style: normal; letter-spacing: 2px;}"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/WBT.mp4",
+        "video_url": "",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "650px",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "600px",
+        "show_text_below": false,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "guarantees_VYeXcx": {
+      "type": "guarantees",
+      "blocks": {
+        "guarantee_UmQKFc": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "truck",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Free Shipping",
+            "title_size": "h4",
+            "text": "<p>On all orders over $150</p>"
+          }
+        },
+        "guarantee_zpCkCE": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "chat_bubble",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Customer Support",
+            "title_size": "h4",
+            "text": "<p>Email for any questions</p>"
+          }
+        },
+        "guarantee_yDaNdM": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "price_tag",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Flexible Payment",
+            "title_size": "h4",
+            "text": "<p>AfterPay, ZipPay & more</p>"
+          }
+        },
+        "guarantee_tytVdt": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "return",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Easy Returns",
+            "title_size": "h4",
+            "text": "<p>Within 30 days for an exchange</p>"
+          }
+        }
+      },
+      "block_order": [
+        "guarantee_UmQKFc",
+        "guarantee_zpCkCE",
+        "guarantee_yDaNdM",
+        "guarantee_tytVdt"
+      ],
+      "settings": {
+        "layout": "default",
+        "column_alignment": "left",
+        "horizontal_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "columns_desktop": 4,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "use_custom_colors": false,
+        "colors_icon": "#ffffff",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 68,
+        "padding_bottom": 68
+      }
+    },
+    "image_with_text_RtKgtb": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jEPqhg": {
+          "type": "heading",
+          "settings": {
+            "heading": "KAVALA'S FOUNDER",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_DhR4Yf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kels (Kelsey Goodwin, <a href=\"https://instagram.com/kelsgoodwin_\"><strong>@kelsgoodwin</strong></a>) launched the business when she was 24 years old on the dream of living between tropical Indonesia and Australia. From NYC she never imagined what the Kavala Community would turn into!</p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "button_bJUb7j": {
+          "type": "button",
+          "settings": {
+            "button_label": "READ OUR STORY",
+            "button_link": "shopify://pages/about",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jEPqhg",
+        "text_DhR4Yf",
+        "button_bJUb7j"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Yeseva One\", serif; font-weight: 400; font-style: normal; letter-spacing: 2px;}"
+      ],
+      "settings": {
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "750px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "video": "shopify://files/videos/Kelsey_744a1e93-0b4d-4b61-9cbe-11e3c37008f3.mp4",
+        "enable_video_looping": true,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_xbdTG3": {
+      "type": "rich-text",
+      "blocks": {
+        "text_XBAHgR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kavala Collective, your ultimate destination for activewear, surfwear, and swimwear. Inspired by the dynamic blend of yoga, surf, and wanderlust lifestyles, our brand is designed for all your adventures. From yoga classes to beachside days and surf sessions, Kavala empowers you to live your best life.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "highlight_phrases": "",
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "text_XBAHgR"
+      ],
+      "custom_css": [
+        "p {font-size: 14px;}"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": false,
+        "use_custom_colors": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#e8d5d0",
+        "gradient_background": "",
+        "padding_top": 60,
+        "padding_bottom": 48
+      }
+    },
+    "rich-text-1": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop The Insta'",
+            "heading_size": "h2",
+            "heading_tag": "h4"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Take Us On Your Endless Adventures<br/><a href=\"https://instagram.com/kavalacollective\"><strong>@kavalacollective</strong></a></p>",
+            "text_size": "typeset",
+            "secondary_color": true,
+            "highlight_phrases": "",
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Yeseva One\", serif; font-weight: 400; font-size: 21px; font-style: normal; letter-spacing: 2px;}",
+        "p {font-size: 15px;}"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#e8d5d0",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "172188057711c78c04": {
+      "type": "apps",
+      "blocks": {
+        "socialwidget_instagram_feed_base_widget_MjLeNG": {
+          "type": "shopify://apps/socialwidget/blocks/base-widget/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "socialwidget_instagram_feed_base_widget_MjLeNG"
+      ],
+      "settings": {
+        "include_margins": false,
+        "show_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TUSC.D.T.jpg",
+            "image_mobile": "shopify://shop_images/TUSC.M.jpg",
+            "image_position": "center center",
+            "text_box_position": "middle-center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "BEST-SELLING SWIM",
+            "heading_size": "h0",
+            "heading_tag": "h2",
+            "text": "",
+            "text_size": "typeset2",
+            "button_label": "Find Your Faves",
+            "button_link": "shopify://collections/best-sellers",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "slide-0"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-family: \"Yeseva One\", serif; font-weight: 400; font-style: normal; letter-spacing: 2px;}"
+      ],
+      "settings": {
+        "slideshow_type": "legacy",
+        "text_alignment": "center",
+        "image_ratio": "adapt_first",
+        "autorotate": true,
+        "autorotate_speed": 7,
+        "full_width": true,
+        "image_behavior": "none",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "600px",
+        "show_text_below": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#efaeb2",
+        "colors_text": "#ffffff",
+        "colors_background": "#ffffff",
+        "colors_overlay": "#454745",
+        "colors_overlay_opacity": 16,
+        "colors_navigation_text": "#ffffff",
+        "colors_navigation_background": "#1a1b18",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "scrolling_promotion_RmEfq9": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "image_JGK4wN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ANTHRO.jpg",
+            "height": 40,
+            "link": ""
+          }
+        },
+        "image_b6NabU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Womens_Health.jpg",
+            "height": 44,
+            "link": ""
+          }
+        },
+        "image_4J33bH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/The_Iconic.jpg",
+            "height": 40,
+            "link": ""
+          }
+        },
+        "image_TkUzbF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FREE_PEOPLE_LOGO_T.jpg",
+            "height": 40,
+            "link": ""
+          }
+        },
+        "image_dbECcB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1544px-VOGUE_LOGO.jpg",
+            "height": 40,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_JGK4wN",
+        "image_b6NabU",
+        "image_4J33bH",
+        "image_TkUzbF",
+        "image_dbECcB"
+      ],
+      "disabled": true,
+      "settings": {
+        "direction": "left",
+        "speed": 1.6,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_icon": "#ffffff",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "collection_list_EwHqjF": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_k3UEh9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "new-arrivals",
+            "image": "shopify://shop_images/RhapsodyLuaLeggingWebsitePhoto4.png",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_tjUdjy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-activewear",
+            "image": "shopify://shop_images/Onyx_Biker_Short_3.jpg",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_rVXwXG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-swim",
+            "image": "shopify://shop_images/ZafarNaviniBottom3.png",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_h3iWr4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "surf-suits",
+            "image": "shopify://shop_images/Paradiso_Onyx_Sulawesi_Surf_Suit_8.jpg",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_URKNkQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "biker-shorts",
+            "image": "shopify://shop_images/Desert_Mauve_Biker_Short_7.jpg",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_hMWLxL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "sports-bras-crops",
+            "image_position": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_k3UEh9",
+        "featured_collection_tjUdjy",
+        "featured_collection_rVXwXG",
+        "featured_collection_h3iWr4",
+        "featured_collection_URKNkQ",
+        "featured_collection_hMWLxL"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_view_all": false,
+        "show_divider": false,
+        "columns_desktop": 5,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "apply_overlay": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "apps_zc4qbA": {
+      "type": "apps",
+      "blocks": {
+        "firework_virtual_store_firework_embed_rfNkrH": {
+          "type": "shopify://apps/firework-shoppable-video-ugc/blocks/firework-embed/347a2e4c-f5cb-410d-8354-490d1e80558c",
+          "settings": {
+            "channel": "kavala_collective_australia",
+            "playlist": "ojNEYo",
+            "layout": "grid",
+            "embedtitle": "Reviews & Testimonials",
+            "titlealignment": "center",
+            "embedtitlesize": 18,
+            "size": "large",
+            "player_placement": "bottom-right",
+            "hashtag": "",
+            "pip": true
+          }
+        }
+      },
+      "block_order": [
+        "firework_virtual_store_firework_embed_rfNkrH"
+      ],
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "countdown_timer_RXPNcL": {
+      "type": "countdown-timer",
+      "blocks": {
+        "heading_cgYJWJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Countdown timer",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "countdown_V7XTDN": {
+          "type": "countdown",
+          "settings": {
+            "date": "09-12-2024",
+            "number_size": "medium",
+            "message": "",
+            "message_size": "typeset2"
+          }
+        },
+        "button_gmdkJX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cgYJWJ",
+        "countdown_V7XTDN",
+        "button_gmdkJX"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#f3f3f3",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_kxE8jJ",
+    "ss_circle_menu_LpynP8",
+    "rich-text-0",
+    "featured_collection_tab_atHQJc",
+    "slideshow_tENNcR",
+    "mix_and_match_ighWnD",
+    "tab-collage",
+    "custom_liquid_EXgf4B",
+    "guarantees",
+    "video-hero",
+    "17164410680e004c37",
+    "featured_collection_tab_8CdXQC",
+    "video_hero_czETTg",
+    "guarantees_VYeXcx",
+    "image_with_text_RtKgtb",
+    "rich_text_xbdTG3",
+    "rich-text-1",
+    "172188057711c78c04",
+    "slideshow",
+    "scrolling_promotion_RmEfq9",
+    "collection_list_EwHqjF",
+    "apps_zc4qbA",
+    "countdown_timer_RXPNcL"
+  ]
+}

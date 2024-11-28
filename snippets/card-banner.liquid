@@ -1,0 +1,126 @@
+{% comment %}
+  Renders a product card
+
+  Accepts:
+  - card_product: {Object} Product Liquid object (optional)
+  - card_collection: {Object} Collection Liquid object (optional)
+  - media_size: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+  - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+  - show_quick_buy: {Boolean} Show the quick add to cart button. Default: false (optional)
+  - show_vendor: {Boolean} Show the product vendor. Default: false
+  - show_rating: {Boolean} Show the product rating. Default: false
+  - enable_quick_view: {Boolean} Enable the quick view feature. Default: true
+  - enable_color_swatches: {Boolean} Enable the product color swatches. Default: false
+  - enable_countdown: {Boolean} Enable the product countdown. Default: true
+  - enable_image_fill: {Boolean} Enable the image fill. Default: true
+  - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+  - section_id: {String} The ID of the section that contains this card.
+  - button_custom_class: {String} custom class for the button
+
+  Usage:
+  {% render 'card-product', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+{%- liquid
+  assign banner_link = banner.link.value
+  assign banner_image = banner.image.value
+  assign banner_heading = banner.heading.value
+  assign banner_text = banner.text | metafield_tag
+  assign banner_text_color = banner.text_color.value
+
+  assign card_url = banner_link.url
+  assign card_url_text = banner_link.text
+
+
+-%}
+
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+
+<div class="card-wrapper card-banner" style="--banner-text-color: {{ banner_text_color | default: '#454745' }}">
+  {%- unless card_url == "" -%}
+  <a href="{{ card_url }}" class="full-unstyled-link">
+    <span class="visually-hidden">{{ card_url_text | escape }}</span>
+  </a>
+  {%- endunless -%}
+  <use-animate data-animate="zoom-fade-small" class="card card--product" tabindex="-1">
+    {%- if banner_image -%}
+      {%- liquid
+        assign featured_media_aspect_ratio = banner_image.aspect_ratio
+
+        if banner_image.aspect_ratio == nil
+          assign featured_media_aspect_ratio = 1
+        endif
+        
+        assign card_product_media = banner_image
+      -%}
+
+      {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 10rem) / 4), (min-width: 750px) calc((100vw - 10rem) / 3), calc(62vw - 3rem){%- endcapture -%}
+      {%- liquid
+        assign image_loading = 'eager'
+        if lazy_load
+          assign image_loading = 'lazy'
+        endif
+
+        assign widths = '165, 360, 535, 750, 940, 1100'
+
+        assign image = banner_image
+        assign alt = image.alt | escape | split: '#' | first
+
+        assign mobile_retina_pixel_dense = 2
+        capture srcset_mobile_retina
+          assign aWidths = widths | remove: ' ' | split: ','
+          for aWidth in aWidths
+            assign retina_mobile_width = aWidth | divided_by: mobile_retina_pixel_dense | floor
+            if forloop.index >= 2
+              echo ', '
+            endif
+            echo image.preview_image | image_url: width: retina_mobile_width | append: ' ' | append: aWidth | append: 'w'
+          endfor
+        endcapture
+      -%}
+      <a href="{{ card_url }}" class="card__media media-wrapper" tabindex="-1">
+        <div class="card--image-animate image-animate media media--{{ media_size }} media--hover-effect{% unless enable_image_fill %} media--image-contain{% endunless %}"
+          {%- if media_size == 'adapt' %} style="--image-ratio-percent: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"{% endif -%}
+        >
+          <picture is="prog-picture" class="motion-reduce" data-hq="{{ image.preview_image | image_url: width: 2000 }}">
+            <source
+              media="(min-resolution: 2dppx) and (max-width: 749px)"
+              srcset="{{ srcset_mobile_retina }}"
+              sizes="{{ sizes }}">
+            {{ image.preview_image | image_url: width: 1100 | image_tag: loading: image_loading, class: 'motion-reduce', sizes: sizes, widths: widths, alt: alt, is: 'lazy-image' }}
+          </picture>
+          <div class="card__inner card-banner--card__inner">
+            <div class="media media--{{ media_size }}" tabindex="-1">
+              <div class="card__content">
+                {%- if banner_heading != "" or banner_heading != blank -%}
+                  <h3 class="card-information__text h4">{{ banner_heading | escape }}</h3>
+                {%- endif -%}
+                {%- if banner_text != "" or banner_text != blank -%}
+                  <div class="rte">
+                    {{ banner_text }}
+                  </div>
+                {%- endif -%}
+                {%- if banner_link != blank -%}
+                  <div class="banner__link">
+                    <span>{{ banner_link.text }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-arrow" fill="none" viewBox="0 0 14 10">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    {%- else -%}
+      <div class="card__inner">
+        <a href="{{ card_url }}" class="media media--{{ media_size }}" tabindex="-1">
+          <div class="card__content">
+            <h3 class="card-information__text h3">{{ banner_heading | escape }}</h3>
+          </div>
+        </a>
+      </div>
+    {%- endif -%}
+  </use-animate>
+</div>

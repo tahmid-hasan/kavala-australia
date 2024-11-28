@@ -1,0 +1,273 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header-group.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE SHIPPING ON ORDERS OVER $150 | AFTERPAY AVAILABLE",
+            "text_on_mobile": "FREE SHIPPING ON ORDERS OVER $150",
+            "text_size": 10,
+            "link": "shopify://collections/new-arrivals"
+          }
+        },
+        "announcement_pGVRPx": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "AFTERPAY AVAILABLE",
+            "text_on_mobile": "AFTERPAY AVAILABLE",
+            "text_size": 13,
+            "link": ""
+          }
+        },
+        "announcement_RHpLmJ": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "NEW COLLECTION: RHAPSODY DROPPING APRIL 8TH",
+            "text_on_mobile": "NEW COLLECTION: RHAPSODY DROPPING APRIL 8TH",
+            "text_size": 11,
+            "link": "shopify://collections/new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement_pGVRPx",
+        "announcement_RHpLmJ"
+      ],
+      "settings": {
+        "only_homepage": false,
+        "layout": "default",
+        "mobile_layout": "carousel",
+        "autorotate": true,
+        "autorotate_speed": 3,
+        "show_navigation": true,
+        "direction": "left",
+        "speed": 2.5,
+        "colors_text": "#ffffff",
+        "colors_background": "#fea6b6",
+        "gradient_background": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "scrolling_promotion_mGa8yU": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "announcement_QcFRYY": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "icon_size": "small",
+            "custom_icon": "",
+            "text": "GARDENIA NOW AVAILABLE",
+            "text_size": 12,
+            "link": "shopify://collections/gardenia"
+          }
+        },
+        "image_TUBVhP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Curser_2.png",
+            "height": 20,
+            "link": ""
+          }
+        },
+        "announcement_DEXpzF": {
+          "type": "announcement",
+          "settings": {
+            "icon": "none",
+            "icon_size": "small",
+            "custom_icon": "",
+            "text": "SELLING OUT FAST",
+            "text_size": 12,
+            "link": "shopify://collections/gardenia"
+          }
+        },
+        "image_C9TcYa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Curser_2.png",
+            "height": 20,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_QcFRYY",
+        "image_TUBVhP",
+        "announcement_DEXpzF",
+        "image_C9TcYa"
+      ],
+      "settings": {
+        "direction": "left",
+        "speed": 1.8,
+        "show_divider": false,
+        "use_custom_colors": true,
+        "colors_icon": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_background": "#f8bb69",
+        "gradient_background": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_XMC7iq": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Shop",
+            "narrow": false,
+            "show_menu_image": false,
+            "promo_image_1": "shopify://shop_images/BloomParosOnesie5.png",
+            "promo_image_ratio_1": "square",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "",
+            "promo_text_1": "New Arrivals",
+            "promo_overlay_content_1": true,
+            "promo_link_1": "shopify://collections/new-arrivals",
+            "promo_image_2": "shopify://shop_images/TuscanyVanuaTopWebsitePhoto3.png",
+            "promo_image_ratio_2": "square",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "Shop All",
+            "promo_overlay_content_2": true,
+            "promo_link_2": "shopify://collections/all"
+          }
+        },
+        "mega_menu_f7VwkT": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Swim & Surfwear",
+            "narrow": false,
+            "show_menu_image": false,
+            "promo_image_1": "shopify://shop_images/TuscanyVanuaTopWebsitePhoto1.png",
+            "promo_image_ratio_1": "square",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "",
+            "promo_text_1": "All Swimwear",
+            "promo_overlay_content_1": true,
+            "promo_link_1": "shopify://collections/all-swim",
+            "promo_image_2": "shopify://shop_images/OnyxTavaTopWebsitePhoto5.png",
+            "promo_image_ratio_2": "square",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "Swim Seperates",
+            "promo_overlay_content_2": true,
+            "promo_link_2": "shopify://collections/swim-separates"
+          }
+        },
+        "mega_menu_RQCEyw": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Activewear",
+            "narrow": false,
+            "show_menu_image": false,
+            "promo_image_1": "shopify://shop_images/BloomParosOnesie12.png",
+            "promo_image_ratio_1": "square",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "",
+            "promo_text_1": "Onesies",
+            "promo_overlay_content_1": true,
+            "promo_link_1": "shopify://collections/onesies",
+            "promo_image_2": "shopify://shop_images/Tuscany_Rhodes_Biker_Short_3.png",
+            "promo_image_ratio_2": "square",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "Biker Shorts",
+            "promo_overlay_content_2": true,
+            "promo_link_2": "shopify://collections/biker-shorts"
+          }
+        },
+        "mega_menu_eNTNF8": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Collections",
+            "narrow": false,
+            "show_menu_image": false,
+            "promo_image_1": "shopify://shop_images/GardeniaKalani9.png",
+            "promo_image_ratio_1": "square",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "",
+            "promo_text_1": "Gardenia",
+            "promo_overlay_content_1": true,
+            "promo_link_1": "shopify://collections/gardenia",
+            "promo_image_2": "shopify://shop_images/Cream_Boho_Misool_Swim_Short_8.png",
+            "promo_image_ratio_2": "square",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "Best-Selling Swim",
+            "promo_overlay_content_2": true,
+            "promo_link_2": "shopify://collections/best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_XMC7iq",
+        "mega_menu_f7VwkT",
+        "mega_menu_RQCEyw",
+        "mega_menu_eNTNF8"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/KAVALA_LOGO_GREY_HI-RES_1f75bbc5-8df6-44b5-93af-0f71128ea62e.png",
+        "mobile_logo": "shopify://shop_images/KAVALA_LOGO_GREY_HI-RES_1f75bbc5-8df6-44b5-93af-0f71128ea62e.png",
+        "logo_height": 38,
+        "mobile_logo_height": 30,
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_mobile": "main-menu",
+        "enable_dropdown_menu": true,
+        "show_line_separator": false,
+        "uppercase_menu_items": true,
+        "cart_icon": "cart",
+        "icon_weight": "1.1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "drawer_featured_collection_title": "Featured collection",
+        "drawer_featured_collection": "",
+        "products_to_show": 10,
+        "enable_sticky_header": true,
+        "show_sticky_header_scroll_up": true,
+        "transparent_logo": "shopify://shop_images/Kavala_NL_Logo_White.png",
+        "mobile_transparent_logo": "shopify://shop_images/Kavala_NL_Logo_White.png",
+        "enable_transparent_header": true,
+        "enable_transparent_header_collection": false,
+        "enable_transparent_header_custom": "",
+        "show_transparent_header_border": false,
+        "transparent_text_color": "#ffffff",
+        "enable_highlight": true,
+        "highlight_labels": "",
+        "highlight_style": "circle",
+        "mobile_logo_position": "center",
+        "colors_text": "#282828",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#e9d5d1",
+        "padding_top": 18,
+        "padding_bottom": 18
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "scrolling_promotion_mGa8yU",
+    "header"
+  ]
+}
