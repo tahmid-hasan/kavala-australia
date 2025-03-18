@@ -67,6 +67,13 @@
   margin-right: -2rem;
 }
 
+.dock__item .cart-count-bubble span[aria-hidden="true"] {
+  display: flex;
+  line-height: 1;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
 .dock__item svg {
   height: 1.8rem;
   width: auto;

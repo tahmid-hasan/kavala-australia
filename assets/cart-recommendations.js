@@ -20,6 +20,16 @@ class CartRecommendations extends HTMLElement {
         const recommendations = html.querySelector('cart-recommendations');
         if (recommendations && recommendations.innerHTML.trim().length) {
           this.innerHTML = recommendations.innerHTML;
+
+          const miniCartMain = this.closest('.mini-cart__main');
+          const cartItems = miniCartMain?.querySelector('cart-items');
+          
+          if (cartItems) {
+            cartItems.scrollIntoView({
+              behavior: 'instant',
+              block: 'start'
+            });
+          }
         }
       })
       .catch(e => {

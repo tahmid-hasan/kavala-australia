@@ -4,42 +4,57 @@
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
+{%- liquid
+  assign hasContent = false
+  for block in section.blocks
+    assign blockHeading = block.settings.heading | default: block.settings.page.title | escape
+    if blockHeading != blank and blockHeading != ""
+      assign hasContent = true
+      break
+    endif
+  endfor
+-%}
 
 {{ 'section-product-details.css' | asset_url | stylesheet_tag }}
 
-<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
-  <div class="page-width{% if section.settings.narrow %} page-width--inner{% endif %}">
-    <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.heading_alignment }}">
-      <{{ section.settings.heading_tag }} class="title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</{{ section.settings.heading_tag }}>
-    </div>
-
-    {%- if section.blocks.size > 0 -%}
-      <div class="product-details">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-          {%- when 'collapsible_row' -%}
-            <accordion-tab class="accordion" {{ block.shopify_attributes }}>
-              <details {% if section.settings.open_first_collapsible_row and forloop.index0 == 0 %}open="open"{% endif %}>
-                <summary>
-                  <span class="summary__title">
-                    <p class="accordion__title h3">
-                      {{ block.settings.heading | default: block.settings.page.title | escape }}
-                    </p>
-                  </span>
-                  <span class="icon icon-plus-alt"></span>
-                </summary>
-                <div class="accordion__content rte typeset">
-                  {{ block.settings.row_content }}
-                  {{ block.settings.page.content }}
-                </div>
-              </details>
-            </accordion-tab>
-          {%- endcase -%}
-        {%- endfor -%}
+{%- if hasContent -%}
+  <div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+    <div class="page-width{% if section.settings.narrow %} page-width--inner{% endif %}">
+      <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.heading_alignment }}">
+        <{{ section.settings.heading_tag }} class="title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</{{ section.settings.heading_tag }}>
       </div>
-    {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="product-details">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+            {%- when 'collapsible_row' -%}
+              {%- assign heading = block.settings.heading | default: block.settings.page.title | escape -%}
+              {%- if heading != blank and heading != "" -%}
+                <accordion-tab class="accordion" {{ block.shopify_attributes }}>
+                  <details {% if section.settings.open_first_collapsible_row and forloop.index0 == 0 %}open="open"{% endif %}>
+                    <summary>
+                      <span class="summary__title">
+                        <p class="accordion__title h3">
+                          {{ block.settings.heading | default: block.settings.page.title | escape }}
+                        </p>
+                      </span>
+                      <span class="icon icon-plus-alt"></span>
+                    </summary>
+                    <div class="accordion__content rte typeset">
+                      {{ block.settings.row_content }}
+                      {{ block.settings.page.content }}
+                    </div>
+                  </details>
+                </accordion-tab>
+              {%- endif -%}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
   </div>
-</div>
+{%- endif -%}
 
 {% schema %}
 {

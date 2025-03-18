@@ -2385,13 +2385,13 @@ input[type=checkbox] {
   background-color: rgb(var(--color-base-accent));
   color: rgb(var(--color-base-solid-button-labels));
   font-family: var(--font-button-family);
-  height: 1.4rem;
-  width: 1.4rem;
+  height: 1.6rem;
+  width: 1.6rem;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
   top: 0;
   right: 0.5rem;
   line-height: 1;
@@ -2625,10 +2625,13 @@ input[type=checkbox] {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1;
 }
 
 .header__icon span:not(.cart-count-bubble) {
   height: 100%;
+  margin-top: 1px;
+  margin-left: 1px;
 }
 
 .header__icon {
@@ -3718,4 +3721,9 @@ span[data-highlight=underline] mark svg path {
     background-color: rgba(0,0,0,0.4);
     z-index: 2;
   }
+}
+
+#gwp-popup {
+  position: relative;
+  z-index: 100;
 }

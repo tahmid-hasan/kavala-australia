@@ -1661,6 +1661,8 @@ product-gallery .product__media-toggle {
   width: 4.4rem;
   height: 4.4rem;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .thumbnail-slider .slider-button .icon {
@@ -1669,6 +1671,7 @@ product-gallery .product__media-toggle {
 
 .thumbnail-slider .slider-button--prev {
   transform: translateX(-100%);
+  justify-content: end;
 }
 
 .thumbnail-slider .slider-button--prev .icon {
@@ -1677,6 +1680,7 @@ product-gallery .product__media-toggle {
 
 .thumbnail-slider .slider-button--next {
   transform: translateX(100%);
+  justify-content: start;
 }
 
 .thumbnail-slider .slider-button--next .icon {

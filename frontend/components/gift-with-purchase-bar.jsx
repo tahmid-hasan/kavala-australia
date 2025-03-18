@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'preact/hooks';
 import register from 'preact-custom-element';
 import GiftWithPurchasePopup from '@/components/gift-with-purchase-popup'; // Import the standard component
+import { Portal } from 'react-portal'
 
 function GiftWithPurchaseBar() {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -113,11 +114,11 @@ function GiftWithPurchaseBar() {
       setUnlockedItems(filteredItems);
 
       const filteredLockedItems = activeGiftData.products.filter(item => !item.is_unlocked)
-      console.log('LockedItems: ', filteredLockedItems)
       setNextToUnlockedItems(filteredLockedItems)
       setNextToUnlockeMessage(filteredLockedItems[0]?.message_to_unlock)
 
       if (filteredLockedItems.length > 0 && !hasRemovedLockedItems) {
+        setCookie('gwp_closed', 'false')
         removeLockedItemsFromCart(filteredLockedItems);
       }
 
@@ -142,13 +143,22 @@ function GiftWithPurchaseBar() {
       }
 
       if(filteredItems.length > 0) {
-        setModalVisible(true)
+        const isGWPClosed = getGWPClosedCookie() === 'true'
+        if(!isGWPClosed) {
+          setModalVisible(true)
+        }
+      } else {
+        console.log('set gwp_closed to false')
+        setCookie('gwp_closed', 'false')
       }
 
       const handleAjaxAdded = (event) => {
         if(filteredItems.length > 0) {
           setTimeout(() => {
-            setModalVisible(true)
+            const isGWPClosed = getGWPClosedCookie() === 'true'
+            if(!isGWPClosed) {
+              setModalVisible(true)
+            }
           }, 1000)
         }
       };
@@ -182,9 +192,27 @@ function GiftWithPurchaseBar() {
     setModalVisible(true);
   };
 
+  const getGWPClosedCookie = () => {
+    const name = 'gwp_closed='
+    const decodedCookie = decodeURIComponent(document.cookie)
+    const cookieArray = decodedCookie.split(';')
+    
+    for(let i = 0; i < cookieArray.length; i++) {
+      let cookie = cookieArray[i];
+      while (cookie.charAt(0) === ' ') {
+        cookie = cookie.substring(1);
+      }
+      if (cookie.indexOf(name) === 0) {
+        return cookie.substring(name.length, cookie.length)
+      }
+    }
+    return ''
+  }
+
   // Function to close the modal popup
   const handleCloseModal = () => {
     setModalVisible(false);
+    setCookie('gwp_closed', 'true');
     if(lastCartState) {
       const miniCart = document.querySelector('mini-cart');
       if(miniCart) {
@@ -388,118 +416,129 @@ function GiftWithPurchaseBar() {
           <span className="free-gift__progress" style={{ '--progress': `0%` }}></span>
         </div>
       )}
-      <GiftWithPurchasePopup isVisible={isModalVisible} onClose={handleCloseModal} giftData={activeGiftData}>
-        {unlockedItems?.length > 0 && (
-          <div class="kv-items-available kv-overflow-hidden kv-relative kv-block kv-p-6 kv-bg-white kv-border kv-border-green-500 kv-rounded-lg kv-dark:bg-gray-800 kv-dark:border-gray-700">
-            <h5 class="kv-mb-2 kv-text-xl kv-font-bold kv-tracking-tight kv-text-gray-900 kv-dark:text-white">
-              You got this
-            </h5>
-            <p class="kv-mb-4 kv-text-lg kv-font-normal kv-text-gray-700 kv-dark:text-gray-400">
-              Enjoy your free gift.
-            </p>
-            {unlockedItems?.map((item, i) => (
-              <div className={`kv-unlocked-product kv-flex kv-items-center kv-py-5 kv-border-t kv-border-gray-200 ${i === unlockedItems.length - 1 ? 'kv-pb-0' : '' }`} key={item.id}>
-                <div className=''>
+      <Portal node={document && document.getElementById('gwp-popup')}>
+        <GiftWithPurchasePopup isVisible={isModalVisible} onClose={handleCloseModal} giftData={activeGiftData}>
+          {unlockedItems?.length > 0 && (
+            <div class="kv-items-available kv-overflow-hidden kv-relative kv-block kv-p-6 kv-bg-white kv-border kv-border-green-500 kv-rounded-lg kv-dark:bg-gray-800 kv-dark:border-gray-700">
+              <h5 class="kv-mb-2 kv-text-xl kv-font-bold kv-tracking-tight kv-text-gray-900 kv-dark:text-white">
+                You got this
+              </h5>
+              <p class="kv-mb-4 kv-text-lg kv-font-normal kv-text-gray-700 kv-dark:text-gray-400">
+                Enjoy your free gift.
+              </p>
+              {unlockedItems?.map((item, i) => (
+                <div className={`kv-unlocked-product kv-flex kv-items-center kv-py-5 kv-border-t kv-border-gray-200 ${i === unlockedItems.length - 1 ? 'kv-pb-0' : '' }`} key={item.id}>
+                  <div className=''>
+                    <div className="kv-w-24">
+                      <div class="kv-unlocked-product-image kv-w-24 kv-h-24 kv-relative kv-rounded-md kv-bg-gray-300">
+                        <img
+                          src={item.featured_image}
+                          alt={item.title}
+                          className="kv-w-full kv-h-full kv-object-cover kv-rounded-md"
+                        />
+                        {item.isInCart && (
+                          <div className='kv-unlocked-product-cart-status kv-absolute -kv-right-3 -kv-top-3'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="kv-size-8 kv-fill-green-500 kv-stroke-white">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="kv-flex kv-flex-col kv-justify-between kv-pl-4 kv-leading-normal kv-flex-grow">
+                    <h5 class="kv-unlocked-product-title kv-text-lg kv-font-medium kv-tracking-tight kv-text-gray-900 kv-dark:text-white">{item.title}</h5>
+                  </div>
+                  <div className="kv-flex kv-atc-btn--wrapper kv-w-auto">
+                    <button className="kv-atc-btn kv-relative kv-inline-flex kv-items-center kv-justify-center kv-p-0.5 kv-mb-2 kv-me-2 kv-overflow-hidden kv-text-sm kv-font-medium kv-text-gray-900 kv-rounded-lg kv-group kv-bg-gradient-to-br kv-from-pink-500 kv-to-orange-400 group-hover:kv-from-pink-500 group-hover:kv-to-orange-400 hover:kv-text-white kv-focus:kv-ring-4 focus:kv-outline-none focus:kv-ring-pink-200"
+                      onClick={(event) => handleAddToCartClick(event, item)}
+                      disabled={item.isInCart && item.variants.length === 1}
+                    >
+                      <span className="kv-relative kv-px-2.5 kv-py-2.5 kv-transition-all kv-ease-in kv-duration-75 kv-bg-white kv-dark:bg-gray-900 kv-rounded-md group-hover:kv-bg-opacity-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="kv-size-6 kv-transition-colors kv-duration-300 group-hover:kv-stroke-white">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                      </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+              {isVariantModalVisible && (
+                <div
+                  ref={variantModalRef}
+                  className="kv-variant-information kv-hidden kv-p-6 kv-pt-10 kv-border-t kv-flex kv-gap-2"
+                  style={{ left: '0', width: '100%' }}
+                >
+                  <button className="kv-absolute kv-top-3 kv-right-6" onClick={(event) => hideVariantModal(event)}>
+                    <svg class="kv-w-6 kv-h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><use href="#icon-close"></use></svg>
+                  </button>
+                  {productToSelect.variants.map(variant => (
+                    <button
+                      className='kv-text-xl kv-inline-flex kv-items-center kv-justify-center kv-p-0.5
+                      disabled:kv-line-through disabled:kv-bg-gradient-to-br disabled:kv-from-pink-500 disabled:kv-to-orange-400
+                      kv-me-2 kv-font-medium kv-text-gray-900 kv-rounded-lg kv-group
+                      kv-bg-gradient-to-br kv-from-pink-500 kv-to-orange-400
+                      group-hover:kv-from-pink-500 group-hover:kv-to-orange-400
+                      hover:kv-text-white kv-focus:kv-ring-4 focus:kv-outline-none focus:kv-ring-pink-200
+                      disabled:hover:kv-bg-gradient-to-br disabled:hover:kv-from-pink-500 disabled:hover:kv-to-orange-400'
+                      key={variant.id}
+                      onClick={(event) => {
+                        handleAddToCart(event, variant.id, productToSelect);
+                        hideVariantModal(event);
+                        setProductToSelect(null);
+                      }}
+                      disabled={!variant.available}>
+                      <span className="kv-relative kv-px-2.5 kv-py-2.5 kv-transition-all kv-ease-in kv-duration-75 kv-bg-white kv-dark:bg-gray-900 kv-rounded-md
+                      group-hover:kv-bg-opacity-0
+                      disabled:group-hover:kv-bg-opacity-100 disabled:hover:kv-bg-white">{variant.title}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+          {nextToUnlockedItems?.length > 0 && (
+            <div class="kv-block kv-items-to-unlock kv-mt-6 kv-p-6 kv-bg-white kv-border kv-border-gray-200 kv-rounded-lg kv-dark:bg-gray-800 kv-dark:border-gray-700">
+              <h5 class="kv-mb-2 kv-text-xl kv-font-bold kv-tracking-tight kv-text-gray-900 kv-dark:text-white">
+                {nextToUnlockMessage}
+              </h5>
+              <p class="kv-mb-4 kv-text-lg kv-font-normal kv-text-gray-700 kv-dark:text-gray-400">
+                {activeGiftData?.content?.popup?.next_unlock_section?.subtitle}
+              </p>
+              <div className="kv-flex">
+                <span className="free-gift__progress free-gift__progress--popup" style={{ "--progress": nextProgressPercentage }}></span>
+              </div>
+              {nextToUnlockedItems?.map((item, i) => (
+                <div className={`kv-flex kv-items-center kv-py-5 ${ i !== 0 ? 'kv-border-t kv-border-gray-200' : '' } ${ i != nextToUnlockedItems.length - 1 ? 'kv-pb-5' : 'kv-pb-0' }`}>
                   <div className="kv-w-24">
-                    <div class="kv-unlocked-product-image kv-w-24 kv-h-24 kv-relative kv-rounded-md kv-bg-gray-300">
+                    <div className="kv-w-24 kv-h-24 kv-rounded-md kv-bg-gray-300">
                       <img
                         src={item.featured_image}
                         alt={item.title}
                         className="kv-w-full kv-h-full kv-object-cover kv-rounded-md"
                       />
-                      {item.isInCart && (
-                        <div className='kv-unlocked-product-cart-status kv-absolute -kv-right-3 -kv-top-3'>
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="kv-size-8 kv-fill-green-500 kv-stroke-white">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                          </svg>
-                        </div>
-                      )}
                     </div>
                   </div>
-                </div>
-                <div className="kv-flex kv-flex-col kv-justify-between kv-pl-4 kv-leading-normal kv-flex-grow">
-                  <h5 class="kv-unlocked-product-title kv-text-lg kv-font-medium kv-tracking-tight kv-text-gray-900 kv-dark:text-white">{item.title}</h5>
-                </div>
-                <div className="kv-flex kv-atc-btn--wrapper kv-w-auto">
-                  <button className="kv-atc-btn kv-relative kv-inline-flex kv-items-center kv-justify-center kv-p-0.5 kv-mb-2 kv-me-2 kv-overflow-hidden kv-text-sm kv-font-medium kv-text-gray-900 kv-rounded-lg kv-group kv-bg-gradient-to-br kv-from-pink-500 kv-to-orange-400 group-hover:kv-from-pink-500 group-hover:kv-to-orange-400 hover:kv-text-white kv-focus:kv-ring-4 focus:kv-outline-none focus:kv-ring-pink-200"
-                    onClick={(event) => handleAddToCartClick(event, item)}
-                    disabled={item.isInCart && item.variants.length === 1}
-                  >
-                    <span className="kv-relative kv-px-2.5 kv-py-2.5 kv-transition-all kv-ease-in kv-duration-75 kv-bg-white kv-dark:bg-gray-900 kv-rounded-md group-hover:kv-bg-opacity-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="kv-size-6 kv-transition-colors kv-duration-300 group-hover:kv-stroke-white">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
-                    </svg>
-                    </span>
-                  </button>
-                </div>
-              </div>
-            ))}
-            {isVariantModalVisible && (
-              <div
-                ref={variantModalRef}
-                className="kv-variant-information kv-hidden kv-p-6 kv-pt-10 kv-border-t kv-flex kv-gap-2"
-                style={{ left: '0', width: '100%' }}
-              >
-                <button className="kv-absolute kv-top-3 kv-right-6" onClick={(event) => hideVariantModal(event)}>
-                  <svg class="kv-w-6 kv-h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><use href="#icon-close"></use></svg>
-                </button>
-                {productToSelect.variants.map(variant => (
-                  <button
-                    className='kv-text-xl kv-inline-flex kv-items-center kv-justify-center kv-p-0.5
-                    disabled:kv-line-through disabled:kv-bg-gradient-to-br disabled:kv-from-pink-500 disabled:kv-to-orange-400
-                    kv-me-2 kv-font-medium kv-text-gray-900 kv-rounded-lg kv-group
-                    kv-bg-gradient-to-br kv-from-pink-500 kv-to-orange-400
-                    group-hover:kv-from-pink-500 group-hover:kv-to-orange-400
-                    hover:kv-text-white kv-focus:kv-ring-4 focus:kv-outline-none focus:kv-ring-pink-200
-                    disabled:hover:kv-bg-gradient-to-br disabled:hover:kv-from-pink-500 disabled:hover:kv-to-orange-400'
-                    key={variant.id}
-                    onClick={(event) => {
-                      handleAddToCart(event, variant.id, productToSelect);
-                      hideVariantModal(event);
-                      setProductToSelect(null);
-                    }}
-                    disabled={!variant.available}>
-                    <span className="kv-relative kv-px-2.5 kv-py-2.5 kv-transition-all kv-ease-in kv-duration-75 kv-bg-white kv-dark:bg-gray-900 kv-rounded-md
-                    group-hover:kv-bg-opacity-0
-                    disabled:group-hover:kv-bg-opacity-100 disabled:hover:kv-bg-white">{variant.title}</span>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-        {nextToUnlockedItems?.length > 0 && (
-          <div class="kv-block kv-items-to-unlock kv-mt-6 kv-p-6 kv-bg-white kv-border kv-border-gray-200 kv-rounded-lg kv-dark:bg-gray-800 kv-dark:border-gray-700">
-            <h5 class="kv-mb-2 kv-text-xl kv-font-bold kv-tracking-tight kv-text-gray-900 kv-dark:text-white">
-              {nextToUnlockMessage}
-            </h5>
-            <p class="kv-mb-4 kv-text-lg kv-font-normal kv-text-gray-700 kv-dark:text-gray-400">
-              {activeGiftData?.content?.popup?.next_unlock_section?.subtitle}
-            </p>
-            <div className="kv-flex">
-              <span className="free-gift__progress free-gift__progress--popup" style={{ "--progress": nextProgressPercentage }}></span>
-            </div>
-            {nextToUnlockedItems?.map((item, i) => (
-              <div className={`kv-flex kv-items-center kv-py-5 ${ i !== 0 ? 'kv-border-t kv-border-gray-200' : '' } ${ i != nextToUnlockedItems.length - 1 ? 'kv-pb-5' : 'kv-pb-0' }`}>
-                <div className="kv-w-24">
-                  <div className="kv-w-24 kv-h-24 kv-rounded-md kv-bg-gray-300">
-                    <img
-                      src={item.featured_image}
-                      alt={item.title}
-                      className="kv-w-full kv-h-full kv-object-cover kv-rounded-md"
-                    />
+                  <div className="kv-flex kv-flex-col kv-justify-between kv-pl-4 kv-leading-normal kv-flex-grow">
+                    <h5 className="kv-text-lg kv-font-medium kv-tracking-tight kv-text-gray-900 kv-dark:text-white">{item?.title}</h5>
                   </div>
                 </div>
-                <div className="kv-flex kv-flex-col kv-justify-between kv-pl-4 kv-leading-normal kv-flex-grow">
-                  <h5 className="kv-text-lg kv-font-medium kv-tracking-tight kv-text-gray-900 kv-dark:text-white">{item?.title}</h5>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </GiftWithPurchasePopup>
+              ))}
+            </div>
+          )}
+        </GiftWithPurchasePopup>
+      </Portal>
     </>
   );
 }
 
 register(GiftWithPurchaseBar, 'gift-with-purchase-bar');
+
+
+const setCookie = (name, value, daysToExpire = 1) => {
+  const date = new Date()
+  date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000))
+  const expires = `expires=${date.toUTCString()}`
+  document.cookie = `${name}=${value}; ${expires}; path=/; SameSite=Strict`
+}
+

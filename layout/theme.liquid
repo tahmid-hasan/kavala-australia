@@ -153,5 +153,7 @@
     {%- if linklists.gift-wrapping.links != blank and linklists.gift-wrapping.links.first.type == 'product_link' -%}
       <script src="{{ 'gift-wrapping.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <div id="gwp-popup"></div>
   </body>
 </html>

@@ -18,6 +18,8 @@
     "vite:build": "vite build"
   },
   "dependencies": {
-    "preact-custom-element": "^4.3.0"
+    "@by-association-only/vite-plugin-shopify-clean": "^2.0.0",
+    "preact-custom-element": "^4.3.0",
+    "react-portal": "^4.2.2"
   }
 }

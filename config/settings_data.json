@@ -101,33 +101,27 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "7709396684840320309": {
         "type": "shopify://apps/socialwidget-instagram-feed/blocks/social-widget/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "11532412952436166569": {
         "type": "shopify://apps/loox-reviews/blocks/loox-inject/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "11809892702313333283": {
         "type": "shopify://apps/firework-virtual-store/blocks/firework-header/347a2e4c-f5cb-410d-8354-490d1e80558c",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "3127803799193547933": {
         "type": "shopify://apps/kaching-custom-cursor/blocks/app-embed-block/8e414c2f-e094-4ca5-85c3-6c0df939a019",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   },

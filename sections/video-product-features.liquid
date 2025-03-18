@@ -21,6 +21,16 @@
       assign fix_ratio = true
     endif
   endif
+
+  assign has_content = false
+
+  if video_id != blank and video_id != '' and video_id != '_9VUPq3SxOc'
+    assign has_content = true
+  endif
+
+  if request.design_mode
+    assign has_content = true
+  endif
 -%}
       
 {%- capture sizes -%}
@@ -30,132 +40,111 @@
     (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px)
     calc(100vw - 10rem), 100vw
   {%- endif %}
-{%- endcapture -%}     
-   
-<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
-  <div class="video-section page-width">
-    <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.heading_alignment }}">
-      <{{ section.settings.heading_tag }} class="title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</{{ section.settings.heading_tag }}>
-    </div>
+{%- endcapture -%}
 
-    <div class="product_features--grid">
-      <div class="product_features--grid_item product_features--grid_item-1">
-        <noscript>
-          <div class="video-section__media"
+{%- unless has_content == false -%}
+  <div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+    <div class="video-section page-width">
+      <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.heading_alignment }}">
+        <{{ section.settings.heading_tag }} class="title {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</{{ section.settings.heading_tag }}>
+      </div>
+
+      <div class="product_features--grid">
+        <div class="product_features--grid_item product_features--grid_item-1">
+          <noscript>
+            <div class="video-section__media"
+              {% if poster != null %}
+                style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+              {% endif %}
+            >
+              {%- if section.settings.video == null and section.settings.video_url != null -%}
+                <a
+                  href="{{ section.settings.video_url }}"
+                  class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
+                >
+                  {%- if poster != null -%}
+                    {{ poster
+                      | image_url: width: 3840
+                      | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+                    }}
+                  {%- else -%}
+                    {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                  {%- endif -%}
+                </a>
+              {%- else -%}
+                {{ section.settings.video
+                  | video_tag:
+                    image_size: "1100x",
+                    loop: section.settings.enable_video_looping,
+                    controls: true,
+                    muted: false
+                }}
+              {%- endif -%}
+            </div>
+          </noscript>
+          <deferred-media class="video-section__media deferred-media no-js-hidden media-wrapper media-wrapper--large{% if fix_ratio %} media-fit-cover{% endif %}" 
+            data-media-id="{{ video_id }}"
             {% if poster != null %}
               style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
             {% endif %}
           >
-            {%- if section.settings.video == null and section.settings.video_url != null -%}
-              <a
-                href="{{ section.settings.video_url }}"
-                class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
-              >
-                {%- if poster != null -%}
-                  {{ poster
-                    | image_url: width: 3840
-                    | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
-                  }}
-                {%- else -%}
-                  {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                {%- endif -%}
-              </a>
-            {%- else -%}
-              {{ section.settings.video
-                | video_tag:
-                  image_size: "1100x",
-                  loop: section.settings.enable_video_looping,
-                  controls: true,
-                  muted: false
-              }}
-            {%- endif -%}
-          </div>
-        </noscript>
-        <deferred-media class="video-section__media deferred-media no-js-hidden media-wrapper media-wrapper--large{% if fix_ratio %} media-fit-cover{% endif %}" 
-          data-media-id="{{ video_id }}"
-          {% if poster != null %}
-            style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-          {% endif %}
-        >
-          <button
-            id="Deferred-Poster-Modal-{{ video_id }}"
-            class="video-section__poster media deferred-media__poster media--landscape"
-            type="button"
-          >
-            {%- if poster != null -%}
-              {{ poster
-                | image_url: width: 3840
-                | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
-              }}
-            {%- else -%}
-              {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-            {%- endif -%}
-            <span class="deferred-media__poster-button motion-reduce">
-              {%- render 'icon', icon: 'play' -%}
-            </span>
-          </button>
+            <button
+              id="Deferred-Poster-Modal-{{ video_id }}"
+              class="video-section__poster media deferred-media__poster media--landscape"
+              type="button"
+            >
+              {%- if poster != null -%}
+                {{ poster
+                  | image_url: width: 3840
+                  | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+                }}
+              {%- else -%}
+                {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {%- endif -%}
+              <span class="deferred-media__poster-button motion-reduce">
+                {%- render 'icon', icon: 'play' -%}
+              </span>
+            </button>
 
-          <template>
-            {%- if section.settings.video == null and section.settings.video_url != null -%}
-              <video-section
-                data-init-mode="template"
-                data-parent="deferred-media"
-                data-loop="{% if section.settings.enable_video_looping %}1{% else %}0{% endif %}"
-                data-type="{{ section.settings.video_url.type }}"
-                data-video-id="{{ section.settings.video_url.id }}"></video-section>
-            {%- else -%}
-              {{ section.settings.video | video_tag:
-                  image_size: "1100x",
-                  autoplay: true,
-                  loop: section.settings.enable_video_looping,
-                  controls: true,
-                  muted: false
-              }}
-            {%- endif -%}
-          </template>
-        </deferred-media>
-      </div>
-      {%- for block in section.blocks -%}
-        <div class="product_features--grid_item product_features--grid_item-{{ forloop.index | plus: 1 }}">
-          <div class="feature__box" {{ block.shopify_attributes }}>
-            {% unless block.settings.heading == blank %}
-              <{{ block.settings.heading_tag }} class="banner__heading">{{ block.settings.heading | escape }}</{{ block.settings.heading_tag }}>
-            {% endunless %}
-            {% unless block.settings.subheading == blank %}
-              <p class="banner__subheading h6">{{ block.settings.subheading | escape }}</p>
-            {% endunless %}
-            {% unless block.settings.text == blank %}
-              <div class="banner__text {{ block.settings.text_size }} rte">{{ block.settings.text }}</div>
-            {% endunless %}
+            <template>
+              {%- if section.settings.video == null and section.settings.video_url != null -%}
+                <video-section
+                  data-init-mode="template"
+                  data-parent="deferred-media"
+                  data-loop="{% if section.settings.enable_video_looping %}1{% else %}0{% endif %}"
+                  data-type="{{ section.settings.video_url.type }}"
+                  data-video-id="{{ section.settings.video_url.id }}"></video-section>
+              {%- else -%}
+                {{ section.settings.video | video_tag:
+                    image_size: "1100x",
+                    autoplay: true,
+                    loop: section.settings.enable_video_looping,
+                    controls: true,
+                    muted: false
+                }}
+              {%- endif -%}
+            </template>
+          </deferred-media>
+        </div>
+        {%- for block in section.blocks -%}
+          <div class="product_features--grid_item product_features--grid_item-{{ forloop.index | plus: 1 }}">
+            <div class="feature__box" {{ block.shopify_attributes }}>
+              {% unless block.settings.heading == blank %}
+                <{{ block.settings.heading_tag }} class="banner__heading">{{ block.settings.heading | escape }}</{{ block.settings.heading_tag }}>
+              {% endunless %}
+              {% unless block.settings.subheading == blank %}
+                <p class="banner__subheading h6">{{ block.settings.subheading | escape }}</p>
+              {% endunless %}
+              {% unless block.settings.text == blank %}
+                <div class="banner__text {{ block.settings.text_size }} rte">{{ block.settings.text }}</div>
+              {% endunless %}
+            </div>
           </div>
-        </div>
-      {%- endfor -%}
-      {% comment %}
-      {%- if section.blocks.size > 0 -%}
-        {% if section.settings.full_width %}<div class="page-width">{%- endif -%}
-        <div class="product__features grid grid--1-col grid--2-col-tablet grid--4-col-desktop">
-          {%- for block in section.blocks -%}
-            {%- if block.settings.heading != blank or block.settings.subheading != blank or block.settings.text != blank -%}
-              <div class="feature__box grid__item" {{ block.shopify_attributes }}>
-                {% unless block.settings.heading == blank %}
-                  <{{ block.settings.heading_tag }} class="banner__heading">{{ block.settings.heading | escape }}</{{ block.settings.heading_tag }}>
-                {% endunless %}
-                {% unless block.settings.subheading == blank %}
-                  <p class="banner__subheading h5">{{ block.settings.subheading | escape }}</p>
-                {% endunless %}
-                {% unless block.settings.text == blank %}
-                  <div class="banner__text {{ block.settings.text_size }} rte">{{ block.settings.text }}</div>
-                {% endunless %}
-              </div>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-        {% if section.settings.full_width %}</div>{%- endif -%}
-      {%- endif -%}
-      {% endcomment %}
+        {%- endfor -%}
+      </div>
     </div>
   </div>
-</div>
+{% endunless %}
 
 {% schema %}
 {

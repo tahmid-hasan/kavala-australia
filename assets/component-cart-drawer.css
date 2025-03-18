@@ -184,6 +184,11 @@ details[open].menu-opening > .cart-drawer {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scrollbar-width: thin;
+  scroll-snap-align: start;
+}
+
+.mini-cart__main > * {
+  scroll-snap-align: start;
 }
 
 .mini-cart__main::-webkit-scrollbar {

@@ -103,7 +103,14 @@ details[open] > .search-modal .modal-overlay::after {
   margin-top: calc(calc(var(--header-bottom-position) - 5rem) / 2);
 }
 
+.search-modal__form {
+  margin-top: 10px;
+}
+
 @media screen and (min-width: 750px) {
+  .search-modal__form {
+    margin-top: 0;
+  }
   .search-modal__form .field {
     width: calc(100% + 3rem);
   }
@@ -124,8 +131,16 @@ details[open] > .search-modal .modal-overlay::after {
   min-height: auto;
 }
 @media only screen and (max-width: 412px) {
+  .search-modal__form .search__input,
   .menu-drawer__search-conteiner .fake-input {
     font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .search-modal__form .search__input,
+  .menu-drawer__search-conteiner .fake-input {
+    font-size: 1.2rem;
   }
 }
 
